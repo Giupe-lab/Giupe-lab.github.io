@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulatore Noleggio Lungo Termine</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial;
+  background:#0b1220;
+  color:#fff;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+h1{font-size:40px;}
+
+.card{
+  background:#111827;
+  padding:20px;
+  border-radius:10px;
+  border:1px solid #1f2937;
+  margin-top:20px;
+}
+
+input, select{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:6px;
+  border:none;
+}
+
+.result{
+  font-size:22px;
+  margin-top:20px;
+  color:#60a5fa;
+}
+
+.btn{
+  display:inline-block;
+  background:#2563eb;
+  color:#fff;
+  padding:14px 20px;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+  margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Simulatore Noleggio Lungo Termine</h1>
+
+<p>Calcola una stima indicativa del costo mensile della tua flotta aziendale.</p>
+
+<div class="card">
+
+<label>Tipologia veicolo</label>
+<select id="tipo">
+<option value="200">Utilitaria</option>
+<option value="350">Rappresentanza</option>
+<option value="300">Furgone</option>
+</select>
+
+<label>Numero veicoli</label>
+<input type="number" id="qty" value="1">
+
+<button class="btn" onclick="calcola()">Calcola costo stimato</button>
+
+<div class="result" id="output"></div>
+
+</div>
+
+<div class="card">
+
+<a class="btn"
+href="https://wa.me/3895658088?text=Ho%20usato%20il%20simulatore%20NLT%20e%20voglio%20una%20offerta%20reale">
+Ricevi offerta reale su WhatsApp
+</a>
+
+</div>
+
+</div>
+
+<script>
+function calcola(){
+  let tipo = document.getElementById("tipo").value;
+  let qty = document.getElementById("qty").value;
+
+  let totale = tipo * qty;
+
+  document.getElementById("output").innerHTML =
+    "Stima mensile: € " + totale;
+}
+</script>
+
+</body>
+</html>
