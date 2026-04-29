@@ -3,98 +3,175 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NLT Aziende - Servizi</title>
+<title>Consulenza Fleet Aziendale</title>
 
 <style>
-body{font-family:Arial;margin:0;background:#f4f6f8;color:#111;}
-.container{max-width:1000px;margin:auto;background:#fff;padding:20px;}
-h1,h2{margin-top:20px;}
-.nav{background:#0b57d0;padding:10px;text-align:center;}
-.nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold;}
-.btn{background:#0b57d0;color:#fff;padding:12px 18px;text-decoration:none;border-radius:6px;}
-.box{background:#f2f2f2;padding:12px;margin:10px 0;border-radius:6px;}
-input,select{width:100%;padding:10px;margin:6px 0;}
-.section{margin-top:40px;}
+body{
+  margin:0;
+  font-family: Arial;
+  background:#070b14;
+  color:#fff;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.hero{
+  padding:80px 0;
+}
+
+h1{
+  font-size:48px;
+  margin-bottom:10px;
+  line-height:1.1;
+}
+
+.sub{
+  color:#cbd5e1;
+  font-size:18px;
+  max-width:750px;
+}
+
+.badge{
+  display:inline-block;
+  background:#111827;
+  color:#60a5fa;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  margin-bottom:15px;
+}
+
+.btn{
+  display:inline-block;
+  background:#2563eb;
+  color:#fff;
+  padding:16px 26px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:25px;
+  font-size:16px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:40px;
+}
+
+.card{
+  background:#111827;
+  padding:18px;
+  border-radius:10px;
+  border:1px solid #1f2937;
+}
+
+.section{
+  margin-top:80px;
+}
+
+.cta{
+  background:#111827;
+  padding:40px;
+  border-radius:12px;
+  text-align:center;
+  border:1px solid #1f2937;
+}
+
+.small{
+  color:#94a3b8;
+  font-size:13px;
+}
+
+hr{
+  border:none;
+  border-top:1px solid #1f2937;
+  margin:60px 0;
+}
+
+@media(max-width:768px){
+  h1{font-size:34px;}
+  .grid{grid-template-columns:1fr;}
+}
 </style>
 
 </head>
 
 <body>
 
-<!-- MENU -->
-<div class="nav">
-<a href="#home">Home</a>
-<a href="#servizi">Servizi</a>
-<a href="#preventivo">Preventivo</a>
-</div>
-
 <div class="container">
 
-<!-- HOME -->
-<div id="home" class="section">
-<h1>Noleggio Lungo Termine per Aziende</h1>
-<p>Soluzioni dedicate a Partite IVA e imprese: zero anticipo, costi certi e gestione completa.</p>
-<a class="btn" href="#preventivo">Richiedi Preventivo</a>
+<!-- HERO -->
+<div class="hero">
+
+<div class="badge">Fleet Management & NLT Aziendale</div>
+
+<h1>Riduci fino al 30% i costi della tua flotta aziendale</h1>
+
+<p class="sub">
+Analizziamo e ottimizziamo la gestione dei veicoli aziendali per PMI e Partite IVA.
+Ricevi una consulenza gratuita con soluzioni su misura.
+</p>
+
+<a class="btn" href="https://wa.me/393331234567?text=Salve,%20vorrei%20una%20analisi%20gratuita%20della%20mia%20flotta%20aziendale">
+📊 Ricevi analisi gratuita flotta
+</a>
+
 </div>
 
-<!-- SERVIZI -->
-<div id="servizi" class="section">
-<h2>I nostri servizi</h2>
-
-<div class="box">✔ Noleggio lungo termine auto aziendali</div>
-<div class="box">✔ Veicoli commerciali e furgoni</div>
-<div class="box">✔ Gestione completa flotta aziendale</div>
-<div class="box">✔ Consulenza fiscale e ottimizzazione costi</div>
-
-<h3>Vantaggi per la tua azienda</h3>
-<div class="box">✔ Nessun investimento iniziale</div>
-<div class="box">✔ Costi deducibili</div>
-<div class="box">✔ Nessuna gestione manutenzione</div>
-</div>
-
-<!-- OFFERTE -->
+<!-- VALUE -->
 <div class="section">
-<h2>Esempi di soluzioni</h2>
 
-<div class="box">Utilitarie da 199€/mese</div>
-<div class="box">Auto rappresentanza da 399€/mese</div>
-<div class="box">Furgoni da 299€/mese</div>
+<h2>Cosa ottieni</h2>
+
+<div class="grid">
+
+<div class="card">✔ Analisi costi flotta aziendale</div>
+<div class="card">✔ Soluzioni NLT personalizzate</div>
+<div class="card">✔ Ottimizzazione fiscale e operativa</div>
+
 </div>
 
-<!-- PREVENTIVO -->
-<div id="preventivo" class="section">
-<h2>Richiedi il tuo preventivo</h2>
-
-<form>
-<input placeholder="Nome e Cognome">
-<input placeholder="Azienda / P.IVA">
-<input placeholder="Telefono WhatsApp">
-
-<select>
-<option>Numero veicoli</option>
-<option>1</option>
-<option>2-3</option>
-<option>4-10</option>
-<option>+10</option>
-</select>
-
-<select>
-<option>Tipologia veicolo</option>
-<option>Utilitaria</option>
-<option>Rappresentanza</option>
-<option>Furgone</option>
-</select>
-
-<div style="margin-top:20px;">
-<a class="btn" href="https://wa.me/3895658088?text=Salve%2C%20sono%20interessato%20al%20noleggio%20lungo%20termine%20per%20la%20mia%20azienda.%20Vorrei%20una%20simulazione%20personalizzata.">
-📩 Ricevi una simulazione gratuita in 30 minuti
-</a>
-Richiedi Preventivo su WhatsApp
-</a>
 </div>
-</form>
 
-<p>Ti contattiamo entro 30 minuti 🚀</p>
+<hr>
+
+<!-- WHY US -->
+<div class="section">
+
+<h2>Perché le aziende si affidano a noi</h2>
+
+<div class="grid">
+
+<div class="card">✔ Unico punto di gestione per tutti i veicoli</div>
+<div class="card">✔ Riduzione costi operativi</div>
+<div class="card">✔ Consulenza indipendente multi-brand</div>
+
+</div>
+
+</div>
+
+<!-- CTA -->
+<div class="section">
+
+<div class="cta">
+
+<h2>Parla con un consulente fleet</h2>
+
+<p class="small">
+Ricevi una valutazione reale della tua situazione aziendale.
+</p>
+
+<a class="btn" href="https://wa.me/3895658088?text=Salve,%20voglio%20una%20consulenza%20per%20ottimizzazione%20flotta%20aziendale">
+Avvia consulenza WhatsApp
+</a>
+
+</div>
 
 </div>
 
