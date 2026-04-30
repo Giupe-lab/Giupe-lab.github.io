@@ -1,12 +1,13 @@
+
 <!doctype html>
 <html lang="it">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La mia flotta | GV Fleet Consulting</title>
-  <meta name="description" content="Gamma veicoli e soluzioni per flotte aziendali: city car, SUV, premium, elettriche e commerciali.">
+  <meta name="description" content="Gamma veicoli per flotte aziendali con 3 auto per categoria, canoni indicativi e contatto diretto WhatsApp o email.">
   <meta property="og:title" content="La mia flotta | GV Fleet Consulting">
-  <meta property="og:description" content="Gamma veicoli e soluzioni per flotte aziendali: city car, SUV, premium, elettriche e commerciali.">
+  <meta property="og:description" content="Scopri city car, compatte, SUV, premium, elettriche, plug-in, commerciali e van per la tua flotta aziendale.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,6 +64,7 @@ img{max-width:100%;display:block}
 }
 .btn.secondary{background:rgba(255,255,255,.08);color:#fff;border:1px solid var(--line);box-shadow:none}
 .btn.whatsapp{background:linear-gradient(135deg,#1bd66f,#0fbf5a);color:#05120b}
+.btn.email{background:rgba(255,255,255,.08);color:#fff;border:1px solid var(--line);box-shadow:none}
 .hero{padding:92px 0 66px}
 .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
 .eyebrow{
@@ -96,19 +98,13 @@ p{color:var(--muted);margin:0 0 18px}
 .section-head p{max-width:640px}
 .grid{display:grid;gap:18px}
 .grid-3{grid-template-columns:repeat(3,1fr)}
-.grid-4{grid-template-columns:repeat(4,1fr)}
 .card{
-  padding:26px;border-radius:28px;
+  padding:24px;border-radius:28px;
   background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.045));
   border:1px solid var(--line);
   box-shadow:0 18px 48px rgba(0,0,0,.18);
 }
 .card:hover{transform:translateY(-4px);transition:.25s ease;border-color:rgba(215,168,79,.45)}
-.icon{
-  width:46px;height:46px;border-radius:16px;
-  display:grid;place-items:center;margin-bottom:18px;
-  background:rgba(215,168,79,.14);color:var(--gold2);font-size:1.35rem;
-}
 .badge{display:inline-flex;padding:7px 11px;border-radius:999px;background:rgba(77,163,255,.13);color:#bfe0ff;font-weight:800;font-size:.78rem;margin-bottom:14px}
 .list{display:grid;gap:10px;margin:18px 0 0;padding:0;list-style:none;color:#dce6f5}
 .list li{display:flex;gap:10px}.list li:before{content:"✓";color:var(--green);font-weight:900}
@@ -119,32 +115,71 @@ p{color:var(--muted);margin:0 0 18px}
 }
 .footer{padding:38px 0;border-top:1px solid var(--line);color:var(--muted)}
 .footer-inner{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}
-.form-card label{display:block;font-weight:800;margin:12px 0 6px}
-input,select{
-  width:100%;padding:14px 14px;border-radius:16px;
-  border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;
-  outline:none;
+.car-card{
+  overflow:hidden;
+  padding:0;
 }
-option{color:#07111f}
-.result{
-  margin-top:18px;padding:22px;border-radius:24px;
-  background:rgba(32,201,151,.12);border:1px solid rgba(32,201,151,.28);
+.car-image{
+  height:190px;
+  background:linear-gradient(135deg,rgba(215,168,79,.18),rgba(77,163,255,.18));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-bottom:1px solid var(--line);
+  position:relative;
 }
-.price{font-size:2.5rem;font-weight:950;color:#fff;line-height:1}
-.table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:22px}
-.table th,.table td{padding:16px;border-bottom:1px solid var(--line);text-align:left}
-.table th{color:#fff;background:rgba(255,255,255,.08)}
-.table td{color:var(--muted)}
+.car-shape{
+  width:78%;
+  height:82px;
+  border-radius:70px 90px 30px 30px;
+  background:linear-gradient(135deg,rgba(255,255,255,.88),rgba(215,168,79,.58));
+  box-shadow:0 28px 50px rgba(0,0,0,.25);
+  position:relative;
+}
+.car-shape:before{
+  content:"";
+  position:absolute;
+  left:22%;
+  top:-32px;
+  width:42%;
+  height:42px;
+  border-radius:70px 70px 8px 8px;
+  background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(77,163,255,.35));
+}
+.car-shape:after{
+  content:"";
+  position:absolute;
+  left:13%;
+  bottom:-16px;
+  width:74%;
+  height:28px;
+  background:
+    radial-gradient(circle at 12% 50%,#050912 0 14px,transparent 15px),
+    radial-gradient(circle at 88% 50%,#050912 0 14px,transparent 15px);
+}
+.car-content{padding:24px}
+.price-row{
+  margin:18px 0;
+  padding:16px;
+  border-radius:20px;
+  background:rgba(215,168,79,.12);
+  border:1px solid rgba(215,168,79,.24);
+}
+.price-row small{display:block;color:var(--muted);font-weight:700}
+.price-row strong{font-size:1.55rem;color:#fff}
+.car-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.car-actions .btn{padding:12px 14px;font-size:.9rem}
+.note{font-size:.9rem;color:var(--muted);margin-top:18px}
 @media(max-width:900px){
-  .hero-grid,.grid-3,.grid-4{grid-template-columns:1fr}
+  .hero-grid,.grid-3{grid-template-columns:1fr}
   .section-head,.band{display:block}
   .nav-inner{height:auto;padding:18px 0;align-items:flex-start}
   .nav-links{flex-wrap:wrap;gap:12px}
   .hero{padding-top:58px}
+  .car-actions{grid-template-columns:1fr}
 }
 </style>
 
-  
 </head>
 <body>
 
@@ -169,51 +204,635 @@ option{color:#07111f}
       <div>
         <div class="eyebrow">La mia flotta</div>
         <h1>Una gamma completa per costruire la flotta perfetta.</h1>
-        <p class="lead">Selezioniamo veicoli per ruolo, budget e utilizzo: dalla city car efficiente al SUV premium, fino ai commerciali per il lavoro quotidiano.</p>
+        <p class="lead">Tre proposte per ogni categoria, con canone indicativo e contatto diretto per ricevere assistenza su configurazione, disponibilità e offerta aggiornata.</p>
         <div class="actions">
           <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20una%20proposta%20per%20la%20mia%20flotta" target="_blank" rel="noopener">Richiedi proposta flotta</a>
           <a class="btn secondary" href="simulatore.html">Simula il canone</a>
         </div>
       </div>
       <div class="hero-card">
-        <h3>Come scegliamo i veicoli</h3>
+        <h3>Assistenza dedicata su ogni modello</h3>
+        <p>Scegli il veicolo che ti interessa e contattaci subito via WhatsApp o email: ti aiutiamo a verificare disponibilità, anticipo, durata, chilometraggio e servizi inclusi.</p>
         <ul class="list">
-          <li>Analisi percorrenza annua e tragitti reali</li>
-          <li>Confronto benzina, diesel, hybrid, plug-in ed elettrico</li>
-          <li>Valutazione immagine aziendale e comfort</li>
-          <li>Ottimizzazione canone, servizi e durata contrattuale</li>
+          <li>Consulenza su modello e allestimento</li>
+          <li>Confronto tra alimentazioni e durate</li>
+          <li>Analisi del canone più adatto alla tua azienda</li>
+          <li>Supporto per singola auto o flotta completa</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section class="section">
+    <div class="container band">
+      <div>
+        <div class="eyebrow">Nota sui canoni</div>
+        <h2>Prezzi indicativi “da”, da confermare con offerta reale.</h2>
+        <p>I canoni possono variare in base a anticipo, durata, chilometraggio, servizi, disponibilità, alimentazione e profilo cliente.</p>
+      </div>
+      <a class="btn" href="simulatore.html">Calcola una stima</a>
+    </div>
+  </section>
+
+  <section class="section" id="city-car">
     <div class="container">
       <div class="section-head">
-        <div><div class="eyebrow">Categorie disponibili</div><h2>Più scelta, più precisione, più valore.</h2></div>
-        <p>Non esiste l’auto migliore in assoluto: esiste quella giusta per la tua funzione aziendale.</p>
+        <div>
+          <div class="eyebrow">City car</div>
+          <h2>City car</h2>
+        </div>
+        <p>Soluzioni agili per città, consulenti e utilizzo quotidiano.</p>
       </div>
-      <div class="grid grid-4">
-        <article class="card"><span class="badge">City car</span><h3>Fiat 500 · Panda · Toyota Aygo X</h3><p>Ideali per città, consegne leggere, dipendenti e utilizzo quotidiano a basso costo.</p></article>
-        <article class="card"><span class="badge">Compatte</span><h3>VW Golf · Peugeot 308 · Toyota Corolla</h3><p>Perfette per commerciali e tecnici che viaggiano spesso con consumi equilibrati.</p></article>
-        <article class="card"><span class="badge">SUV aziendali</span><h3>Jeep Avenger · Nissan Qashqai · Peugeot 3008</h3><p>Comfort, spazio e immagine professionale per ruoli dinamici.</p></article>
-        <article class="card"><span class="badge">Premium</span><h3>Audi A4 · BMW Serie 3 · Mercedes Classe C</h3><p>Rappresentanza, direzione e clienti strategici: presenza e qualità superiore.</p></article>
-        <article class="card"><span class="badge">Elettriche</span><h3>Tesla Model 3 · Volvo EX30 · Fiat 600e</h3><p>Per aziende attente a sostenibilità, ZTL, benefit e immagine innovativa.</p></article>
-        <article class="card"><span class="badge">Plug-in hybrid</span><h3>BMW X1 PHEV · Cupra Formentor · Mercedes GLA</h3><p>Soluzioni flessibili per chi alterna città, extraurbano e viaggi lunghi.</p></article>
-        <article class="card"><span class="badge">Furgoni</span><h3>Fiat Doblò · Ford Transit · Peugeot Partner</h3><p>Per artigiani, logistica, assistenza tecnica, delivery e manutenzioni.</p></article>
-        <article class="card"><span class="badge">Van & 9 posti</span><h3>Vito · Transporter · Ducato Combi</h3><p>Soluzioni per trasporto persone, squadre operative, hotel e servizi navetta.</p></article>
+      <div class="grid grid-3">
+        
+        <article class="card car-card">
+          <div class="car-image" aria-label="Fiat 500">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">City car</span>
+            <h3>Fiat 500</h3>
+            <p>Compatta, iconica e perfetta per muoversi in città con stile.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 289/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Fiat%20500%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Fiat%20500&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Fiat%20500%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Fiat Panda">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">City car</span>
+            <h3>Fiat Panda</h3>
+            <p>Pratica, economica e ideale per flotte operative leggere.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 269/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Fiat%20Panda%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Fiat%20Panda&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Fiat%20Panda%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Toyota Aygo X">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">City car</span>
+            <h3>Toyota Aygo X</h3>
+            <p>City crossover moderno, efficiente e facile da gestire.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 299/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Toyota%20Aygo%20X%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Toyota%20Aygo%20X&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Toyota%20Aygo%20X%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="compatte-aziendali">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Compatte aziendali</div>
+          <h2>Compatte aziendali</h2>
+        </div>
+        <p>Equilibrio tra comfort, consumi e immagine professionale.</p>
+      </div>
+      <div class="grid grid-3">
+        
+        <article class="card car-card">
+          <div class="car-image" aria-label="Volkswagen Golf">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Compatte aziendali</span>
+            <h3>Volkswagen Golf</h3>
+            <p>Solida, versatile e adatta a commerciali sempre in movimento.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 429/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Volkswagen%20Golf%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Volkswagen%20Golf&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Volkswagen%20Golf%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Peugeot 308">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Compatte aziendali</span>
+            <h3>Peugeot 308</h3>
+            <p>Design moderno, comfort elevato e ottimo rapporto qualità/canone.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 399/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Peugeot%20308%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Peugeot%20308&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Peugeot%20308%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Toyota Corolla">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Compatte aziendali</span>
+            <h3>Toyota Corolla</h3>
+            <p>Affidabile, efficiente e ideale per percorrenze costanti.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 419/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Toyota%20Corolla%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Toyota%20Corolla&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Toyota%20Corolla%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="suv-aziendali">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">SUV aziendali</div>
+          <h2>SUV aziendali</h2>
+        </div>
+        <p>Più spazio, presenza e comfort per ruoli dinamici.</p>
+      </div>
+      <div class="grid grid-3">
+        
+        <article class="card car-card">
+          <div class="car-image" aria-label="Jeep Avenger">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">SUV aziendali</span>
+            <h3>Jeep Avenger</h3>
+            <p>SUV compatto, distintivo e perfetto per uso urbano ed extraurbano.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 449/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Jeep%20Avenger%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Jeep%20Avenger&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Jeep%20Avenger%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Nissan Qashqai">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">SUV aziendali</span>
+            <h3>Nissan Qashqai</h3>
+            <p>SUV completo, spazioso e adatto a team commerciali.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 489/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Nissan%20Qashqai%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Nissan%20Qashqai&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Nissan%20Qashqai%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Peugeot 3008">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">SUV aziendali</span>
+            <h3>Peugeot 3008</h3>
+            <p>Comfort premium, tecnologia e forte immagine aziendale.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 529/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Peugeot%203008%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Peugeot%203008&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Peugeot%203008%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="premium">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Premium</div>
+          <h2>Premium</h2>
+        </div>
+        <p>Per direzione, rappresentanza e clienti strategici.</p>
+      </div>
+      <div class="grid grid-3">
+        
+        <article class="card car-card">
+          <div class="car-image" aria-label="Audi A4">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Premium</span>
+            <h3>Audi A4</h3>
+            <p>Eleganza, qualità percepita e grande comfort nei viaggi.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 689/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Audi%20A4%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Audi%20A4&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Audi%20A4%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="BMW Serie 3">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Premium</span>
+            <h3>BMW Serie 3</h3>
+            <p>Dinamica, professionale e ideale per ruoli direzionali.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 719/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20BMW%20Serie%203%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20BMW%20Serie%203&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20BMW%20Serie%203%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Mercedes Classe C">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Premium</span>
+            <h3>Mercedes Classe C</h3>
+            <p>Rappresentanza, sicurezza e immagine di alto livello.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 749/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Mercedes%20Classe%20C%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Mercedes%20Classe%20C&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Mercedes%20Classe%20C%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="elettriche">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Elettriche</div>
+          <h2>Elettriche</h2>
+        </div>
+        <p>Ideali per aziende attente a sostenibilità, ZTL e innovazione.</p>
+      </div>
+      <div class="grid grid-3">
+        
+        <article class="card car-card">
+          <div class="car-image" aria-label="Tesla Model 3">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Elettriche</span>
+            <h3>Tesla Model 3</h3>
+            <p>Elettrica efficiente, tecnologica e adatta a lunghe percorrenze.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 649/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Tesla%20Model%203%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Tesla%20Model%203&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Tesla%20Model%203%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Volvo EX30">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Elettriche</span>
+            <h3>Volvo EX30</h3>
+            <p>SUV elettrico compatto, premium e molto moderno.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 599/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Volvo%20EX30%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Volvo%20EX30&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Volvo%20EX30%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Fiat 600e">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Elettriche</span>
+            <h3>Fiat 600e</h3>
+            <p>Elettrica pratica, spaziosa e perfetta per mobilità urbana.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 479/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Fiat%20600e%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Fiat%20600e&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Fiat%20600e%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="plug-in-hybrid">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Plug-in hybrid</div>
+          <h2>Plug-in hybrid</h2>
+        </div>
+        <p>Soluzioni flessibili per città, autostrada e percorsi misti.</p>
+      </div>
+      <div class="grid grid-3">
+        
+        <article class="card car-card">
+          <div class="car-image" aria-label="BMW X1 Plug-in Hybrid">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Plug-in hybrid</span>
+            <h3>BMW X1 Plug-in Hybrid</h3>
+            <p>SUV premium efficiente, versatile e molto rappresentativo.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 749/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20BMW%20X1%20Plug-in%20Hybrid%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20BMW%20X1%20Plug-in%20Hybrid&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20BMW%20X1%20Plug-in%20Hybrid%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Cupra Formentor e-Hybrid">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Plug-in hybrid</span>
+            <h3>Cupra Formentor e-Hybrid</h3>
+            <p>Sportiva, distintiva e adatta a chi vuole immagine forte.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 659/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Cupra%20Formentor%20e-Hybrid%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Cupra%20Formentor%20e-Hybrid&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Cupra%20Formentor%20e-Hybrid%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Mercedes GLA Plug-in Hybrid">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Plug-in hybrid</span>
+            <h3>Mercedes GLA Plug-in Hybrid</h3>
+            <p>Compatta premium, confortevole e tecnologica.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 719/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Mercedes%20GLA%20Plug-in%20Hybrid%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Mercedes%20GLA%20Plug-in%20Hybrid&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Mercedes%20GLA%20Plug-in%20Hybrid%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="veicoli-commerciali">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Veicoli commerciali</div>
+          <h2>Veicoli commerciali</h2>
+        </div>
+        <p>Per artigiani, tecnici, delivery e attività operative.</p>
+      </div>
+      <div class="grid grid-3">
+        
+        <article class="card car-card">
+          <div class="car-image" aria-label="Fiat Doblò">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Veicoli commerciali</span>
+            <h3>Fiat Doblò</h3>
+            <p>Compatto, capiente e ideale per assistenza tecnica urbana.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 379/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Fiat%20Dobl%C3%B2%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Fiat%20Dobl%C3%B2&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Fiat%20Dobl%C3%B2%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Ford Transit Custom">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Veicoli commerciali</span>
+            <h3>Ford Transit Custom</h3>
+            <p>Robusto, spazioso e perfetto per lavoro quotidiano.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 529/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Ford%20Transit%20Custom%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Ford%20Transit%20Custom&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Ford%20Transit%20Custom%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Peugeot Partner">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Veicoli commerciali</span>
+            <h3>Peugeot Partner</h3>
+            <p>Pratico, efficiente e configurabile per diverse attività.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 399/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Peugeot%20Partner%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Peugeot%20Partner&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Peugeot%20Partner%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="van-e-9-posti">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Van e 9 posti</div>
+          <h2>Van e 9 posti</h2>
+        </div>
+        <p>Per trasporto persone, navette, hotel e squadre operative.</p>
+      </div>
+      <div class="grid grid-3">
+        
+        <article class="card car-card">
+          <div class="car-image" aria-label="Mercedes Vito">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Van e 9 posti</span>
+            <h3>Mercedes Vito</h3>
+            <p>Professionale, confortevole e adatto a servizi premium.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 699/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Mercedes%20Vito%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Mercedes%20Vito&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Mercedes%20Vito%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Volkswagen Transporter">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Van e 9 posti</span>
+            <h3>Volkswagen Transporter</h3>
+            <p>Versatile, affidabile e ideale per team e attrezzature.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 679/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Volkswagen%20Transporter%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Volkswagen%20Transporter&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Volkswagen%20Transporter%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
+
+        <article class="card car-card">
+          <div class="car-image" aria-label="Fiat Ducato Combi">
+            <div class="car-shape"></div>
+          </div>
+          <div class="car-content">
+            <span class="badge">Van e 9 posti</span>
+            <h3>Fiat Ducato Combi</h3>
+            <p>Ampio, pratico e pensato per trasporto persone e lavoro.</p>
+            <div class="price-row">
+              <small>Canone indicativo</small>
+              <strong>da € 619/mese</strong>
+            </div>
+            <div class="car-actions">
+              <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Fiat%20Ducato%20Combi%20a%20noleggio%20lungo%20termine." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta%20assistenza%20Fiat%20Ducato%20Combi&body=Ciao%2C%20vorrei%20ricevere%20assistenza%20e%20una%20quotazione%20per%20Fiat%20Ducato%20Combi%20a%20noleggio%20lungo%20termine.">Email</a>
+            </div>
+          </div>
+        </article>
+    
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <div class="section-head"><div><div class="eyebrow">Servizi inclusi</div><h2>Una flotta senza pensieri.</h2></div></div>
-      <div class="grid grid-3">
-        <article class="card"><h3>Manutenzione ordinaria e straordinaria</h3><p>Controllo dei costi e riduzione degli imprevisti operativi.</p></article>
-        <article class="card"><h3>Assicurazione e assistenza</h3><p>Coperture integrate, soccorso e gestione pratica più semplice.</p></article>
-        <article class="card"><h3>Pneumatici e veicolo sostitutivo</h3><p>Servizi configurabili in base alle reali esigenze della tua azienda.</p></article>
+    <div class="container band">
+      <div>
+        <h2>Non sai quale scegliere?</h2>
+        <p>Raccontaci come usi i veicoli: ti proponiamo la combinazione migliore per costi, immagine e operatività.</p>
       </div>
+      <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20non%20so%20quale%20auto%20scegliere%20per%20la%20mia%20flotta%2C%20vorrei%20assistenza" target="_blank" rel="noopener">Ricevi assistenza</a>
     </div>
   </section>
 </main>
