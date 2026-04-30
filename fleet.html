@@ -4,24 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La mia flotta | GV Fleet Consulting</title>
-  <meta name="description" content="Auto per noleggio lungo termine e flotte aziendali: utilitarie, compatte, SUV, premium, elettriche, plug-in, commerciali e van.">
+  <meta name="description" content="Auto e veicoli per flotte aziendali: utilitarie, compatte, SUV, premium, elettriche, plug-in, commerciali e van.">
   <style>
     :root {
-      --bg:#07111f;
-      --bg2:#0d1b2f;
-      --card:#111f34;
-      --text:#f7f9fc;
-      --muted:#b8c4d6;
-      --line:rgba(255,255,255,.12);
-      --gold:#d7a84f;
-      --gold2:#f2cc7b;
-      --green:#19c66b;
+      --bg:#07111f; --text:#f7f9fc; --muted:#b8c4d6;
+      --line:rgba(255,255,255,.12); --gold:#d7a84f; --gold2:#f2cc7b; --green:#19c66b;
     }
     * { box-sizing:border-box; }
     body {
-      margin:0;
-      font-family:Inter, Arial, sans-serif;
-      color:var(--text);
+      margin:0; font-family:Inter, Arial, sans-serif; color:var(--text);
       background:
         radial-gradient(circle at top left, rgba(215,168,79,.22), transparent 30%),
         radial-gradient(circle at top right, rgba(77,163,255,.18), transparent 35%),
@@ -30,93 +21,55 @@
     }
     a { color:inherit; text-decoration:none; }
     .container { width:min(1180px,92%); margin:auto; }
-    .nav {
-      position:sticky; top:0; z-index:10;
-      background:rgba(7,17,31,.86);
-      backdrop-filter:blur(16px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav-inner {
-      min-height:78px;
-      display:flex; align-items:center; justify-content:space-between; gap:20px;
-    }
+    .nav { position:sticky; top:0; z-index:10; background:rgba(7,17,31,.86); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
+    .nav-inner { min-height:78px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
     .logo { font-weight:900; letter-spacing:.3px; }
     .logo span { color:var(--gold); }
     .nav-links { display:flex; flex-wrap:wrap; gap:16px; align-items:center; color:var(--muted); font-weight:700; }
     .nav-links a:hover { color:#fff; }
-    .btn {
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 18px; border-radius:999px;
-      font-weight:900; border:1px solid transparent;
-      transition:.2s ease;
-    }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 18px; border-radius:999px; font-weight:900; border:1px solid transparent; transition:.2s ease; }
     .btn:hover { transform:translateY(-2px); }
     .btn.primary { background:linear-gradient(135deg,var(--gold),var(--gold2)); color:#07111f; }
     .btn.whatsapp { background:linear-gradient(135deg,#19d96f,#0eb85a); color:#04130a; }
     .btn.email { background:rgba(255,255,255,.08); color:#fff; border-color:var(--line); }
     .hero { padding:86px 0 48px; }
     .hero-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:42px; align-items:center; }
-    .eyebrow {
-      color:var(--gold2); font-weight:900; letter-spacing:.13em;
-      text-transform:uppercase; font-size:.78rem;
-    }
-    h1 {
-      font-size:clamp(2.4rem,5vw,5.2rem);
-      line-height:.98; letter-spacing:-.06em; margin:16px 0 20px;
-    }
-    h2 {
-      font-size:clamp(1.8rem,3vw,3rem);
-      line-height:1.05; letter-spacing:-.04em; margin:0;
-    }
+    .eyebrow { color:var(--gold2); font-weight:900; letter-spacing:.13em; text-transform:uppercase; font-size:.78rem; }
+    h1 { font-size:clamp(2.4rem,5vw,5.2rem); line-height:.98; letter-spacing:-.06em; margin:16px 0 20px; }
+    h2 { font-size:clamp(1.8rem,3vw,3rem); line-height:1.05; letter-spacing:-.04em; margin:0; }
     h3 { margin:0 0 8px; font-size:1.25rem; }
     p { color:var(--muted); margin:0 0 16px; }
     .lead { font-size:1.15rem; max-width:720px; color:#dce6f5; }
-    .hero-card {
-      padding:30px; border-radius:32px;
-      background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045));
-      border:1px solid var(--line);
-      box-shadow:0 24px 70px rgba(0,0,0,.32);
-    }
+    .hero-card { padding:30px; border-radius:32px; background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045)); border:1px solid var(--line); box-shadow:0 24px 70px rgba(0,0,0,.32); }
     .hero-card ul { margin:20px 0 0; padding:0; list-style:none; display:grid; gap:10px; color:#dce6f5; }
     .hero-card li:before { content:"✓"; color:var(--green); font-weight:900; margin-right:8px; }
-    .note-band {
-      margin:26px auto 20px; padding:28px; border-radius:28px;
-      background:linear-gradient(135deg,rgba(215,168,79,.16),rgba(77,163,255,.12));
-      border:1px solid var(--line);
-      display:flex; align-items:center; justify-content:space-between; gap:20px;
-    }
+    .note-band { margin:26px auto 20px; padding:28px; border-radius:28px; background:linear-gradient(135deg,rgba(215,168,79,.16),rgba(77,163,255,.12)); border:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; gap:20px; }
     .vehicle-section { padding:54px 0; }
     .section-title { width:min(1180px,92%); margin:0 auto 24px; display:flex; align-items:end; justify-content:space-between; gap:18px; }
     .section-title span { color:var(--gold2); font-weight:900; text-transform:uppercase; letter-spacing:.12em; font-size:.75rem; }
-    .vehicle-grid {
-      width:min(1180px,92%); margin:auto;
-      display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
-    }
-    .vehicle-card {
-      overflow:hidden; border-radius:30px;
-      background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.045));
-      border:1px solid var(--line);
-      box-shadow:0 18px 48px rgba(0,0,0,.22);
-    }
-    .vehicle-card img {
-      width:100%;
-      height:230px;
-      object-fit:cover;
-      background:#111;
+    .section-title p { max-width:420px; text-align:right; }
+    .vehicle-grid { width:min(1180px,92%); margin:auto; display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .vehicle-card { overflow:hidden; border-radius:30px; background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.045)); border:1px solid var(--line); box-shadow:0 18px 48px rgba(0,0,0,.22); }
+    .visual-panel {
+      height:230px; padding:22px; position:relative; overflow:hidden;
+      background:
+        radial-gradient(circle at 20% 15%,rgba(215,168,79,.40),transparent 24%),
+        radial-gradient(circle at 80% 10%,rgba(77,163,255,.30),transparent 30%),
+        linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.03));
       border-bottom:1px solid var(--line);
     }
+    .visual-top { display:flex; justify-content:space-between; align-items:center; color:#fff; }
+    .visual-top span { color:var(--gold2); font-weight:900; text-transform:uppercase; letter-spacing:.1em; font-size:.72rem; }
+    .visual-top strong { width:52px; height:52px; border-radius:18px; display:grid; place-items:center; background:rgba(255,255,255,.11); border:1px solid var(--line); }
+    .car-line { position:absolute; left:10%; right:10%; top:92px; height:96px; }
+    .body { position:absolute; left:0; right:0; bottom:18px; height:54px; border-radius:80px 90px 28px 28px; background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(215,168,79,.68)); box-shadow:0 26px 50px rgba(0,0,0,.30); }
+    .roof { position:absolute; left:25%; top:4px; width:45%; height:54px; border-radius:80px 80px 10px 10px; background:linear-gradient(135deg,rgba(255,255,255,.74),rgba(77,163,255,.42)); }
+    .wheel { position:absolute; bottom:2px; width:32px; height:32px; border-radius:50%; background:#050912; border:6px solid rgba(255,255,255,.45); }
+    .w1 { left:13%; } .w2 { right:13%; }
+    .model-name { position:absolute; left:22px; bottom:18px; font-size:1.1rem; font-weight:900; letter-spacing:-.02em; }
     .vehicle-content { padding:24px; }
-    .tag {
-      display:inline-flex; padding:7px 11px; border-radius:999px;
-      background:rgba(77,163,255,.14); color:#c8e6ff;
-      font-size:.78rem; font-weight:900; margin-bottom:12px;
-    }
-    .price {
-      margin:18px 0; padding:16px;
-      border-radius:20px;
-      background:rgba(215,168,79,.13);
-      border:1px solid rgba(215,168,79,.26);
-    }
+    .tag { display:inline-flex; padding:7px 11px; border-radius:999px; background:rgba(77,163,255,.14); color:#c8e6ff; font-size:.78rem; font-weight:900; margin-bottom:12px; }
+    .price { margin:18px 0; padding:16px; border-radius:20px; background:rgba(215,168,79,.13); border:1px solid rgba(215,168,79,.26); }
     .price small { display:block; color:var(--muted); font-weight:800; }
     .price strong { display:block; font-size:1.55rem; color:#fff; }
     .cta-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
@@ -127,6 +80,7 @@
       .nav-inner, .note-band, .section-title { display:block; }
       .nav-inner { padding:18px 0; }
       .nav-links { margin-top:14px; }
+      .section-title p { text-align:left; }
       .hero { padding-top:56px; }
       .cta-row { grid-template-columns:1fr; }
     }
@@ -153,20 +107,20 @@
         <div>
           <div class="eyebrow">La mia flotta</div>
           <h1>Auto e veicoli per aziende che vogliono muoversi meglio.</h1>
-          <p class="lead">Scegli una categoria, guarda 3 proposte consigliate e richiedi subito assistenza. I canoni sono indicativi e vanno confermati con offerta reale aggiornata.</p>
+          <p class="lead">Versione professionale senza immagini fuorvianti: ogni scheda mostra modello, canone indicativo e contatto diretto. Le foto reali esatte si possono aggiungere dopo caricandole su GitHub.</p>
           <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:28px;">
             <a class="btn primary" href="#utilitarie">Vedi le auto</a>
             <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20proposta%20per%20la%20mia%20flotta%20aziendale" target="_blank" rel="noopener">Richiedi proposta</a>
           </div>
         </div>
         <div class="hero-card">
-          <h3>Assistenza su ogni modello</h3>
-          <p>Ti aiutiamo a scegliere durata, km annui, anticipo e servizi inclusi in base all’utilizzo reale della tua azienda.</p>
+          <h3>Zero immagini sbagliate, massima credibilità.</h3>
+          <p>Meglio una grafica elegante e coerente che una foto di un modello diverso: su un sito business la precisione conta.</p>
           <ul>
-            <li>Utilitarie, SUV, premium, elettriche e commerciali</li>
+            <li>3 auto per categoria</li>
             <li>Canoni indicativi chiari</li>
-            <li>Contatto immediato via WhatsApp o email</li>
-            <li>Soluzioni per singola auto o flotta completa</li>
+            <li>WhatsApp ed email su ogni modello</li>
+            <li>Pronta per inserire foto reali esatte</li>
           </ul>
         </div>
       </div>
@@ -182,15 +136,30 @@
     </div>
 
     
-    <section class="vehicle-section">
+    <section class="vehicle-section" id="utilitarie">
       <div class="section-title">
-        <span>Utilitarie</span>
-        <h2>Utilitarie</h2>
+        <div>
+          <span>Utilitarie</span>
+          <h2>Utilitarie</h2>
+        </div>
+        <p>3 proposte consigliate per questa categoria.</p>
       </div>
       <div class="vehicle-grid">
     
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=900&q=80" alt="Fiat 500" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>City premium</span>
+              <strong>F5</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Fiat 500</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Utilitarie</p>
             <h3>Fiat 500</h3>
@@ -207,7 +176,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=900&q=80" alt="Fiat Panda" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Operativa</span>
+              <strong>FP</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Fiat Panda</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Utilitarie</p>
             <h3>Fiat Panda</h3>
@@ -224,7 +205,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=80" alt="Toyota Aygo X" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Urban crossover</span>
+              <strong>TA</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Toyota Aygo X</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Utilitarie</p>
             <h3>Toyota Aygo X</h3>
@@ -243,15 +236,30 @@
       </div>
     </section>
     
-    <section class="vehicle-section">
+    <section class="vehicle-section" id="compatte-aziendali">
       <div class="section-title">
-        <span>Compatte aziendali</span>
-        <h2>Compatte aziendali</h2>
+        <div>
+          <span>Compatte aziendali</span>
+          <h2>Compatte aziendali</h2>
+        </div>
+        <p>3 proposte consigliate per questa categoria.</p>
       </div>
       <div class="vehicle-grid">
     
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80" alt="Volkswagen Golf" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Business</span>
+              <strong>VG</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Volkswagen Golf</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Compatte aziendali</p>
             <h3>Volkswagen Golf</h3>
@@ -268,7 +276,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=900&q=80" alt="Peugeot 308" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Comfort</span>
+              <strong>P3</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Peugeot 308</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Compatte aziendali</p>
             <h3>Peugeot 308</h3>
@@ -285,7 +305,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=900&q=80" alt="Toyota Corolla" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Hybrid</span>
+              <strong>TC</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Toyota Corolla</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Compatte aziendali</p>
             <h3>Toyota Corolla</h3>
@@ -304,15 +336,30 @@
       </div>
     </section>
     
-    <section class="vehicle-section">
+    <section class="vehicle-section" id="suv-aziendali">
       <div class="section-title">
-        <span>SUV aziendali</span>
-        <h2>SUV aziendali</h2>
+        <div>
+          <span>SUV aziendali</span>
+          <h2>SUV aziendali</h2>
+        </div>
+        <p>3 proposte consigliate per questa categoria.</p>
       </div>
       <div class="vehicle-grid">
     
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=80" alt="Jeep Avenger" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>SUV compatto</span>
+              <strong>JA</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Jeep Avenger</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">SUV aziendali</p>
             <h3>Jeep Avenger</h3>
@@ -329,7 +376,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=80" alt="Nissan Qashqai" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>SUV business</span>
+              <strong>NQ</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Nissan Qashqai</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">SUV aziendali</p>
             <h3>Nissan Qashqai</h3>
@@ -346,7 +405,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=900&q=80" alt="Peugeot 3008" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>SUV premium</span>
+              <strong>P3</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Peugeot 3008</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">SUV aziendali</p>
             <h3>Peugeot 3008</h3>
@@ -365,15 +436,30 @@
       </div>
     </section>
     
-    <section class="vehicle-section">
+    <section class="vehicle-section" id="premium">
       <div class="section-title">
-        <span>Premium</span>
-        <h2>Premium</h2>
+        <div>
+          <span>Premium</span>
+          <h2>Premium</h2>
+        </div>
+        <p>3 proposte consigliate per questa categoria.</p>
       </div>
       <div class="vehicle-grid">
     
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=900&q=80" alt="Audi A4" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Executive</span>
+              <strong>AA</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Audi A4</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Premium</p>
             <h3>Audi A4</h3>
@@ -390,7 +476,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1555215695-3004980ad54c?auto=format&fit=crop&w=900&q=80" alt="BMW Serie 3" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Manager</span>
+              <strong>BS</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">BMW Serie 3</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Premium</p>
             <h3>BMW Serie 3</h3>
@@ -407,7 +505,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=900&q=80" alt="Mercedes Classe C" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Luxury</span>
+              <strong>MC</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Mercedes Classe C</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Premium</p>
             <h3>Mercedes Classe C</h3>
@@ -426,15 +536,30 @@
       </div>
     </section>
     
-    <section class="vehicle-section">
+    <section class="vehicle-section" id="elettriche">
       <div class="section-title">
-        <span>Elettriche</span>
-        <h2>Elettriche</h2>
+        <div>
+          <span>Elettriche</span>
+          <h2>Elettriche</h2>
+        </div>
+        <p>3 proposte consigliate per questa categoria.</p>
       </div>
       <div class="vehicle-grid">
     
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=900&q=80" alt="Tesla Model 3" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Full electric</span>
+              <strong>TM</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Tesla Model 3</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Elettriche</p>
             <h3>Tesla Model 3</h3>
@@ -451,7 +576,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=900&q=80" alt="Volvo EX30" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Electric SUV</span>
+              <strong>VE</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Volvo EX30</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Elettriche</p>
             <h3>Volvo EX30</h3>
@@ -468,7 +605,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80" alt="Fiat 600e" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Urban electric</span>
+              <strong>F6</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Fiat 600e</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Elettriche</p>
             <h3>Fiat 600e</h3>
@@ -487,15 +636,30 @@
       </div>
     </section>
     
-    <section class="vehicle-section">
+    <section class="vehicle-section" id="plug-in-hybrid">
       <div class="section-title">
-        <span>Plug-in hybrid</span>
-        <h2>Plug-in hybrid</h2>
+        <div>
+          <span>Plug-in hybrid</span>
+          <h2>Plug-in hybrid</h2>
+        </div>
+        <p>3 proposte consigliate per questa categoria.</p>
       </div>
       <div class="vehicle-grid">
     
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=900&q=80" alt="BMW X1 Plug-in" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>PHEV premium</span>
+              <strong>BX</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">BMW X1 Plug-in</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Plug-in hybrid</p>
             <h3>BMW X1 Plug-in</h3>
@@ -512,7 +676,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=900&q=80" alt="Cupra Formentor e-Hybrid" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Sport hybrid</span>
+              <strong>CF</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Cupra Formentor e-Hybrid</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Plug-in hybrid</p>
             <h3>Cupra Formentor e-Hybrid</h3>
@@ -529,7 +705,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?auto=format&fit=crop&w=900&q=80" alt="Mercedes GLA Plug-in" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Hybrid luxury</span>
+              <strong>MG</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Mercedes GLA Plug-in</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Plug-in hybrid</p>
             <h3>Mercedes GLA Plug-in</h3>
@@ -548,15 +736,30 @@
       </div>
     </section>
     
-    <section class="vehicle-section">
+    <section class="vehicle-section" id="veicoli-commerciali">
       <div class="section-title">
-        <span>Veicoli commerciali</span>
-        <h2>Veicoli commerciali</h2>
+        <div>
+          <span>Veicoli commerciali</span>
+          <h2>Veicoli commerciali</h2>
+        </div>
+        <p>3 proposte consigliate per questa categoria.</p>
       </div>
       <div class="vehicle-grid">
     
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80" alt="Fiat Doblò" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Cargo</span>
+              <strong>FD</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Fiat Doblò</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Veicoli commerciali</p>
             <h3>Fiat Doblò</h3>
@@ -573,7 +776,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Ford Transit Custom" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Work van</span>
+              <strong>FT</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Ford Transit Custom</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Veicoli commerciali</p>
             <h3>Ford Transit Custom</h3>
@@ -590,7 +805,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=80" alt="Peugeot Partner" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Business van</span>
+              <strong>PP</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Peugeot Partner</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Veicoli commerciali</p>
             <h3>Peugeot Partner</h3>
@@ -609,15 +836,30 @@
       </div>
     </section>
     
-    <section class="vehicle-section">
+    <section class="vehicle-section" id="van-e-9-posti">
       <div class="section-title">
-        <span>Van e 9 posti</span>
-        <h2>Van e 9 posti</h2>
+        <div>
+          <span>Van e 9 posti</span>
+          <h2>Van e 9 posti</h2>
+        </div>
+        <p>3 proposte consigliate per questa categoria.</p>
       </div>
       <div class="vehicle-grid">
     
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80" alt="Mercedes Vito" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>People mover</span>
+              <strong>MV</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Mercedes Vito</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Van e 9 posti</p>
             <h3>Mercedes Vito</h3>
@@ -634,7 +876,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=900&q=80" alt="Volkswagen Transporter" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Team van</span>
+              <strong>VT</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Volkswagen Transporter</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Van e 9 posti</p>
             <h3>Volkswagen Transporter</h3>
@@ -651,7 +905,19 @@
         </article>
         
         <article class="vehicle-card">
-          <img src="https://images.unsplash.com/photo-1583267746897-2cf415887172?auto=format&fit=crop&w=900&q=80" alt="Fiat Ducato Combi" loading="lazy">
+          <div class="visual-panel">
+            <div class="visual-top">
+              <span>Navetta</span>
+              <strong>FD</strong>
+            </div>
+            <div class="car-line">
+              <div class="roof"></div>
+              <div class="body"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div>
+            <div class="model-name">Fiat Ducato Combi</div>
+          </div>
           <div class="vehicle-content">
             <p class="tag">Van e 9 posti</p>
             <h3>Fiat Ducato Combi</h3>
