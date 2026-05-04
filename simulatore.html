@@ -243,6 +243,8 @@ option{color:#07111f}
 </main>
 <script>
 function calculate(){
+  const franchigiaSelect = document.getElementById('franchigia');
+const franchigiaText = franchigiaSelect.options[franchigiaSelect.selectedIndex].text;
   const type = Number(document.getElementById('type').value);
   const vehicles = Math.max(1, Number(document.getElementById('vehicles').value || 1));
   const km = Number(document.getElementById('km').value);
@@ -254,12 +256,14 @@ function calculate(){
   document.getElementById('price').textContent = monthly.toLocaleString('it-IT', {style:'currency', currency:'EUR', maximumFractionDigits:0});
   document.getElementById('detail').textContent = vehicles + " veicoli · stima indicativa IVA esclusa · configurazione da verificare";
 }
+  document.getElementById('franchigiaTesto').textContent = franchigiaText;
 calculate();
 </script>
 
 
 <footer class="footer">
   <div class="container footer-inner">
+    <p id="franchigiaTesto"></p>
     <div><strong>GV Fleet Consulting</strong><br>Fleet management e noleggio lungo termine per aziende, PMI e Partite IVA.</div>
     <div>Consulenza indipendente multi-brand · Analisi costi · Soluzioni su misura</div>
   </div>
