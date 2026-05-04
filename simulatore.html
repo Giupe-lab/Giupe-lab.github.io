@@ -264,7 +264,7 @@ else if (franchigiaValore === 750) impattoFranchigia = -20;
 else if (franchigiaValore === 1000) impattoFranchigia = -35;
 else if (franchigiaValore === 1500) impattoFranchigia = -55;
   const discount = vehicles >= 10 ? .92 : vehicles >= 5 ? .96 : 1;
-  const monthly = Math.round(((type + km + services + franchigia) * duration * vehicles * discount) / 5) * 5;
+  const monthly = Math.round(((type + km + services + impattoFranchigia) * duration * vehicles * discount) / 5) * 5;
   document.getElementById('price').textContent = monthly.toLocaleString('it-IT', {style:'currency', currency:'EUR', maximumFractionDigits:0});
   document.getElementById('detail').textContent = vehicles + " veicoli · stima indicativa IVA esclusa · configurazione da verificare";
 }
