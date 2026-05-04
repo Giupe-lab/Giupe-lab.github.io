@@ -248,8 +248,9 @@ function calculate(){
   const km = Number(document.getElementById('km').value);
   const duration = Number(document.getElementById('duration').value);
   const services = Number(document.getElementById('services').value);
+  const franchigia = Number(document.getElementById('franchigia').value);
   const discount = vehicles >= 10 ? .92 : vehicles >= 5 ? .96 : 1;
-  const monthly = Math.round(((type + km + services) * duration * vehicles * discount) / 5) * 5;
+  const monthly = Math.round(((type + km + services + franchigia) * duration * vehicles * discount) / 5) * 5;
   document.getElementById('price').textContent = monthly.toLocaleString('it-IT', {style:'currency', currency:'EUR', maximumFractionDigits:0});
   document.getElementById('detail').textContent = vehicles + " veicoli · stima indicativa IVA esclusa · configurazione da verificare";
 }
