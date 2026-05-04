@@ -211,11 +211,14 @@ option{color:#07111f}
           <option value="55">Plus: pneumatici + veicolo sostitutivo</option>
           <option value="95">Premium: coperture estese + assistenza completa</option>
         </select>
-<label>Franchigia</label>
+label>Franchigia</label>
 <select id="franchigia">
-  <option value="0">Franchigia media (consigliata)</option>
-  <option value="45">Franchigia bassa (+ protezione)</option>
-  <option value="-35">Franchigia alta (canone più basso)</option>
+  <option value="0">€ 0</option>
+  <option value="250">€ 250</option>
+  <option value="500" selected>€ 500</option>
+  <option value="750">€ 750</option>
+  <option value="1000">€ 1.000</option>
+  <option value="1500">€ 1.500</option>
 </select>
         <button class="btn" style="width:100%;margin-top:18px" onclick="calculate()">Calcola costo stimato</button>
         <div class="result" id="result">
@@ -250,7 +253,16 @@ const franchigiaText = franchigiaSelect.options[franchigiaSelect.selectedIndex].
   const km = Number(document.getElementById('km').value);
   const duration = Number(document.getElementById('duration').value);
   const services = Number(document.getElementById('services').value);
-  const franchigia = Number(document.getElementById('franchigia').value);
+ const franchigiaValore = Number(document.getElementById('franchigia').value);
+
+let impattoFranchigia = 0;
+
+if (franchigiaValore === 0) impattoFranchigia = 60;
+else if (franchigiaValore === 250) impattoFranchigia = 35;
+else if (franchigiaValore === 500) impattoFranchigia = 0;
+else if (franchigiaValore === 750) impattoFranchigia = -20;
+else if (franchigiaValore === 1000) impattoFranchigia = -35;
+else if (franchigiaValore === 1500) impattoFranchigia = -55;
   const discount = vehicles >= 10 ? .92 : vehicles >= 5 ? .96 : 1;
   const monthly = Math.round(((type + km + services + franchigia) * duration * vehicles * discount) / 5) * 5;
   document.getElementById('price').textContent = monthly.toLocaleString('it-IT', {style:'currency', currency:'EUR', maximumFractionDigits:0});
