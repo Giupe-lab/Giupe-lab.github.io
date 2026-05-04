@@ -211,7 +211,12 @@ option{color:#07111f}
           <option value="55">Plus: pneumatici + veicolo sostitutivo</option>
           <option value="95">Premium: coperture estese + assistenza completa</option>
         </select>
-
+<label>Franchigia</label>
+<select id="franchigia">
+  <option value="0">Franchigia media (consigliata)</option>
+  <option value="45">Franchigia bassa (+ protezione)</option>
+  <option value="-35">Franchigia alta (canone più basso)</option>
+</select>
         <button class="btn" style="width:100%;margin-top:18px" onclick="calculate()">Calcola costo stimato</button>
         <div class="result" id="result">
           <p>Stima mensile flotta</p>
