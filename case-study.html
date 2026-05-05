@@ -226,5 +226,37 @@ option{color:#07111f}
       link.classList.add('active');
     }
   });
+</script><script>
+let lastScrollTop = 0;
+const nav = document.querySelector('.nav');
+
+window.addEventListener('scroll', function () {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > 80) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+
+  if (currentScroll > lastScrollTop && currentScroll > 140) {
+    nav.style.transform = 'translateY(-100%)';
+  } else {
+    nav.style.transform = 'translateY(0)';
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
+const links = document.querySelectorAll('.nav-links a');
+const currentPage = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+  const linkPage = link.getAttribute('href');
+
+  if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+    link.classList.add('active');
+  }
+});
 </script></body>
 </html>
