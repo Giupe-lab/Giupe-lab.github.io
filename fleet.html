@@ -958,5 +958,16 @@
       <div>Consulenza indipendente multi-brand · Analisi costi · Soluzioni su misura</div>
     </div>
   </footer>
-</body>
+<script>
+  const links = document.querySelectorAll('.nav-links a');
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute('href');
+
+    if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+      link.classList.add('active');
+    }
+  });
+</script></body>
 </html>
