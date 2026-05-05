@@ -1,351 +1,45 @@
-<!doctype html>
-<html lang="it">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Simulatore Noleggio Lungo Termine | GV Fleet Consulting</title>
-  <meta name="description" content="Calcola una stima indicativa del costo mensile della tua flotta aziendale.">
-  <meta property="og:title" content="Simulatore Noleggio Lungo Termine | GV Fleet Consulting">
-  <meta property="og:description" content="Calcola una stima indicativa del costo mensile della tua flotta aziendale.">
-  <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  
-<style>.nav.nav {
-  transition: transform .35s ease, background .35s ease;
-}
-
-.nav.scrolled {
-  background: rgba(7, 17, 31, 0.94);
-  box-shadow: 0 16px 40px rgba(0,0,0,.25);
-}
-
-.nav-links a.active {
-  color: #fff;
-  font-weight: 900;
-}
-  color: #fff;
-  font-weight: 900;
-}
-
-.nav-links a.active::after {
-  width: 100%;
-}
-:root{
-  --bg:#07111f;
-  --bg2:#0d1b2f;
-  --card:#101f35;
-  --card2:#13263f;
-  --line:rgba(255,255,255,.10);
-  --text:#f5f7fb;
-  --muted:#b8c4d6;
-  --gold:#d7a84f;
-  --gold2:#f2cc7b;
-  --blue:#4da3ff;
-  --green:#20c997;
-  --shadow:0 24px 70px rgba(0,0,0,.35);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  color:var(--text);
-  background:
-    radial-gradient(circle at top right,rgba(77,163,255,.22),transparent 35%),
-    radial-gradient(circle at top left,rgba(215,168,79,.20),transparent 28%),
-    linear-gradient(180deg,var(--bg),#050912 70%);
-  line-height:1.6;
-}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.container{width:min(1180px,92%);margin:auto}
-.nav{
-  position:sticky;top:0;z-index:20;
-  backdrop-filter:blur(18px);
-  background:rgba(7,17,31,.78);
-  border-bottom:1px solid var(--line);
-}
-.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}
-.logo{font-weight:900;letter-spacing:.3px;font-size:1.05rem}
-.logo span{color:var(--gold)}
-.nav-links{display:flex;align-items:center;gap:18px;color:var(--muted);font-weight:650;font-size:.95rem}
-.nav-links a:hover{color:#fff}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  padding:14px 20px;border-radius:999px;
-  background:linear-gradient(135deg,var(--gold),var(--gold2));
-  color:#07111f;font-weight:900;
-  box-shadow:0 14px 34px rgba(215,168,79,.22);
-  border:0;cursor:pointer;
-}
-.btn.secondary{background:rgba(255,255,255,.08);color:#fff;border:1px solid var(--line);box-shadow:none}
-.btn.whatsapp{background:linear-gradient(135deg,#1bd66f,#0fbf5a);color:#05120b}
-.hero{padding:92px 0 66px}
-.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:10px;
-  color:var(--gold2);font-weight:850;
-  text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;
-}
-h1{font-size:clamp(2.45rem,5vw,5.4rem);line-height:.98;margin:18px 0 20px;letter-spacing:-.06em}
-h2{font-size:clamp(2rem,3.6vw,3.3rem);line-height:1.05;margin:0 0 14px;letter-spacing:-.045em}
-h3{margin:0 0 10px;font-size:1.18rem}
-p{color:var(--muted);margin:0 0 18px}
-.lead{font-size:1.18rem;max-width:720px;color:#d8e1ef}
-.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-.hero-card,.glass{
-  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045));
-  border:1px solid var(--line);
-  border-radius:32px;
-  box-shadow:var(--shadow);
-}
-.hero-card{padding:28px;position:relative;overflow:hidden}
-.hero-card:before{
-  content:"";position:absolute;inset:-80px -80px auto auto;width:220px;height:220px;
-  background:rgba(215,168,79,.22);filter:blur(18px);border-radius:999px;
-}
-.metric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
-.metric{padding:20px;border-radius:24px;background:rgba(255,255,255,.07);border:1px solid var(--line)}
-.metric strong{display:block;font-size:2rem;color:#fff;line-height:1}
-.metric span{font-size:.88rem;color:var(--muted)}
-.section{padding:72px 0}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:30px}
-.section-head p{max-width:640px}
-.grid{display:grid;gap:18px}
-.grid-3{grid-template-columns:repeat(3,1fr)}
-.grid-4{grid-template-columns:repeat(4,1fr)}
-.card{
-  padding:26px;border-radius:28px;
-  background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.045));
-  border:1px solid var(--line);
-  box-shadow:0 18px 48px rgba(0,0,0,.18);
-}
-.card:hover{transform:translateY(-4px);transition:.25s ease;border-color:rgba(215,168,79,.45)}
-.icon{
-  width:46px;height:46px;border-radius:16px;
-  display:grid;place-items:center;margin-bottom:18px;
-  background:rgba(215,168,79,.14);color:var(--gold2);font-size:1.35rem;
-}
-.badge{display:inline-flex;padding:7px 11px;border-radius:999px;background:rgba(77,163,255,.13);color:#bfe0ff;font-weight:800;font-size:.78rem;margin-bottom:14px}
-.list{display:grid;gap:10px;margin:18px 0 0;padding:0;list-style:none;color:#dce6f5}
-.list li{display:flex;gap:10px}.list li:before{content:"✓";color:var(--green);font-weight:900}
-.band{
-  padding:34px;border-radius:34px;border:1px solid var(--line);
-  background:linear-gradient(135deg,rgba(215,168,79,.16),rgba(77,163,255,.12));
-  display:flex;align-items:center;justify-content:space-between;gap:22px;
-}
-.footer{padding:38px 0;border-top:1px solid var(--line);color:var(--muted)}
-.footer-inner{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}
-.form-card label{display:block;font-weight:800;margin:12px 0 6px}
-input,select{
-  width:100%;padding:14px 14px;border-radius:16px;
-  border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;
-  outline:none;
-}
-option{color:#07111f}
-.result{
-  margin-top:18px;padding:22px;border-radius:24px;
-  background:rgba(32,201,151,.12);border:1px solid rgba(32,201,151,.28);
-}
-.price{font-size:2.5rem;font-weight:950;color:#fff;line-height:1}
-.table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:22px}
-.table th,.table td{padding:16px;border-bottom:1px solid var(--line);text-align:left}
-.table th{color:#fff;background:rgba(255,255,255,.08)}
-.table td{color:var(--muted)}
-@media(max-width:900px){
-  .hero-grid,.grid-3,.grid-4{grid-template-columns:1fr}
-  .section-head,.band{display:block}
-  .nav-inner{height:auto;padding:18px 0;align-items:flex-start}
-  .nav-links{flex-wrap:wrap;gap:12px}
-  .hero{padding-top:58px}
-}
+<!DOCTYPE html><html><head>
+<style>
+body{font-family:Arial;margin:0}
+.nav{position:sticky;top:0;background:#07111f;color:white;padding:10px}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.nav-links a{margin:0 10px;color:white;text-decoration:none}
 </style>
-
-  
-</head>
+<title>Simulatore</title></head>
 <body>
-
-
-
 <nav class="nav">
   <div class="container nav-inner">
     <a class="logo" href="index.html">
-  <img src="logo.png" alt="GV">
-  <span>Fleet Consulting</span>
-</a>
-
+      <img src="logo.png" style="height:32px;">
+      <span>Fleet Consulting</span>
+    </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="fleet.html">La mia flotta</a>
-      <a href="simulatore.html" class="active">Simulatore</a>
+      <a href="simulatore.html">Simulatore</a>
       <a href="case-study.html">Case Study</a>
       <a href="storychisiamo.html">Chi siamo</a>
-      <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20consulenza" target="_blank">WhatsApp</a>
     </div>
   </div>
 </nav>
-<main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Simulatore professionale</div>
-        <h1>Stima il costo mensile della tua flotta aziendale.</h1>
-        <p class="lead">Inserisci tipologia, numero veicoli, durata, chilometraggio e servizi. Il risultato è indicativo: per una proposta reale analizziamo disponibilità, profilo aziendale e condizioni aggiornate.</p>
-        <div class="actions">
-          <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20stima%20personalizzata%20per%20il%20noleggio%20lungo%20termine" target="_blank" rel="noopener">Ricevi stima personalizzata</a>
-        </div>
-      </div>
-      <div class="hero-card form-card">
-        <label>Tipologia veicolo</label>
-        <select id="type">
-          <option value="310">City car / utilitaria</option>
-          <option value="430">Compatta aziendale</option>
-          <option value="560">SUV medio</option>
-          <option value="760">Premium / rappresentanza</option>
-          <option value="520">Veicolo commerciale</option>
-          <option value="690">Elettrica</option>
-        </select>
 
-        <label>Numero veicoli</label>
-        <input id="vehicles" type="number" min="1" value="3">
-
-        <label>Km annui per veicolo</label>
-        <select id="km">
-          <option value="0">10.000 km</option>
-          <option value="35">15.000 km</option>
-          <option value="70">20.000 km</option>
-          <option value="120">30.000 km</option>
-          <option value="190">40.000 km</option>
-        </select>
-
-        <label>Durata contratto</label>
-        <select id="duration">
-          <option value="1.08">24 mesi</option>
-          <option value="1">36 mesi</option>
-          <option value=".93">48 mesi</option>
-          <option value=".89">60 mesi</option>
-        </select>
-
-        <label>Pacchetto servizi</label>
-        <select id="services">
-          <option value="0">Standard</option>
-          <option value="55">Plus: pneumatici + veicolo sostitutivo</option>
-          <option value="95">Premium: coperture estese + assistenza completa</option>
-        </select>
-<label style="font-weight:900;">Franchigia</label>
-<select id="franchigia">
-  <option value="0">€ 0</option>
-  <option value="250">€ 250</option>
-  <option value="500" selected>€ 500</option>
-  <option value="750">€ 750</option>
-  <option value="1000">€ 1.000</option>
-  <option value="1500">€ 1.500</option>
-</select>
-        <button class="btn" style="width:100%;margin-top:18px" onclick="calculate()">Calcola costo stimato</button>
-        <div class="result" id="result">
-          <p>Stima mensile flotta</p>
-          <div class="price" id="price">€ 1.395</div>
-          <p id="detail">3 veicoli · canone indicativo IVA esclusa</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <div><div class="eyebrow">Cosa influenza il canone</div><h2>Il prezzo giusto nasce da una configurazione corretta.</h2></div>
-        <p>Due offerte apparentemente simili possono avere costi reali molto diversi. Per questo confrontiamo sempre servizi, penali, anticipo, franchigie e durata.</p>
-      </div>
-      <div class="grid grid-3">
-        <article class="card"><h3>Chilometraggio</h3><p>Troppo basso genera extra costi; troppo alto aumenta inutilmente il canone.</p></article>
-        <article class="card"><h3>Servizi inclusi</h3><p>Pneumatici, manutenzione, assistenza e sostitutiva cambiano molto il valore reale.</p></article>
-        <article class="card"><h3>Scelta veicolo</h3><p>Segmento, alimentazione e disponibilità incidono su canone e tempi di consegna.</p></article>
-      </div>
-    </div>
-  </section>
-</main>
-<script>
-function calculate(){
-  const franchigiaSelect = document.getElementById('franchigia');
-const franchigiaText = franchigiaSelect.options[franchigiaSelect.selectedIndex].text;
-  const type = Number(document.getElementById('type').value);
-  const vehicles = Math.max(1, Number(document.getElementById('vehicles').value || 1));
-  const km = Number(document.getElementById('km').value);
-  const duration = Number(document.getElementById('duration').value);
-  const services = Number(document.getElementById('services').value);
- const franchigiaValore = Number(document.getElementById('franchigia').value);
-
-let impattoFranchigia = 0;
-
-if (franchigiaValore === 0) impattoFranchigia = 60;
-else if (franchigiaValore === 250) impattoFranchigia = 35;
-else if (franchigiaValore === 500) impattoFranchigia = 0;
-else if (franchigiaValore === 750) impattoFranchigia = -20;
-else if (franchigiaValore === 1000) impattoFranchigia = -35;
-else if (franchigiaValore === 1500) impattoFranchigia = -55;
-  const discount = vehicles >= 10 ? .92 : vehicles >= 5 ? .96 : 1;
-  const monthly = Math.round(((type + km + services + impattoFranchigia) * duration * vehicles * discount) / 5) * 5;
-  document.getElementById('price').textContent = monthly.toLocaleString('it-IT', {style:'currency', currency:'EUR', maximumFractionDigits:0});
-  document.getElementById('detail').textContent = vehicles + " veicoli · stima indicativa IVA esclusa · configurazione da verificare";
-}
-  document.getElementById('franchigiaTesto').textContent = franchigiaText;
-calculate();
-</script>
-
-
-<footer class="footer">
-  <div class="container footer-inner">
-    <p id="franchigiaTesto"></p>
-    <div><strong>GV Fleet Consulting</strong><br>Fleet management e noleggio lungo termine per aziende, PMI e Partite IVA.</div>
-    <div>Consulenza indipendente multi-brand · Analisi costi · Soluzioni su misura</div>
-  </div>
-</footer>
+<div style="padding:40px">
+<h1>Simulatore</h1>
+<p>Simulatore attivo (versione base).</p>
+</div>
 
 <script>
-  const links = document.querySelectorAll('.nav-links a');
-  const currentPage = window.location.pathname.split("/").pop();
-
-  links.forEach(link => {
-    const linkPage = link.getAttribute('href');
-
-    if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
-      link.classList.add('active');
-    }
-  });
-</script><script>
 let lastScrollTop = 0;
 const nav = document.querySelector('.nav');
-
 window.addEventListener('scroll', function () {
-  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (currentScroll > 80) {
-    nav.classList.add('scrolled');
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > lastScrollTop && currentScroll > 100) {
+    nav.style.transform = "translateY(-100%)";
   } else {
-    nav.classList.remove('scrolled');
+    nav.style.transform = "translateY(0)";
   }
-
-  if (currentScroll > lastScrollTop && currentScroll > 140) {
-    nav.style.transform = 'translateY(-100%)';
-  } else {
-    nav.style.transform = 'translateY(0)';
-  }
-
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  lastScrollTop = currentScroll;
 });
+</script>
 
-const links = document.querySelectorAll('.nav-links a');
-const currentPage = window.location.pathname.split("/").pop();
-
-links.forEach(link => {
-  const linkPage = link.getAttribute('href');
-
-  if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
-    link.classList.add('active');
-  }
-});
-</script></body>
-</html>
+</body></html>
