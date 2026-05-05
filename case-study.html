@@ -19,7 +19,19 @@
   font-weight: 900;
 }
 
-.nav-links a.active::after {
+.nav {
+  transition: transform .35s ease, background .35s ease;
+}
+
+.nav.scrolled {
+  background: rgba(7, 17, 31, 0.94);
+  box-shadow: 0 16px 40px rgba(0,0,0,.25);
+}
+
+.nav-links a.active {
+  color: #fff;
+  font-weight: 900;
+}
   width: 100%;
 }
 :root{
