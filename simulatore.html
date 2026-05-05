@@ -13,6 +13,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   
 <style>.nav {
+  transition: transform 0.35s ease;
+}
+
+.hide-nav {
+  transform: translateY(-100%);
+}
   position: sticky;
   top: 0;
   z-index: 999;
@@ -276,5 +282,20 @@ calculate();
   </div>
 </footer>
 
-</body>
+<script>
+let lastScroll = 0;
+const navbar = document.querySelector('.nav');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll && currentScroll > 100) {
+    navbar.classList.add('hide-nav');
+  } else {
+    navbar.classList.remove('hide-nav');
+  }
+
+  lastScroll = currentScroll;
+});
+</script></body>
 </html>
