@@ -46,7 +46,7 @@ img{max-width:100%;display:block}
 
 .container{width:min(1180px,92%);margin:auto}
 
-/* NAVBAR */
+
 .nav{
   position:sticky;
   top:0;
@@ -98,7 +98,7 @@ img{max-width:100%;display:block}
   border-bottom:2px solid var(--gold);
 }
 
-/* BUTTON */
+
 .btn{
   padding:12px 18px;
   border-radius:999px;
@@ -115,7 +115,7 @@ img{max-width:100%;display:block}
   color:#05120b;
 }
 
-/* HERO */
+
 .hero{padding:90px 0}
 
 h1{
@@ -131,9 +131,17 @@ p{color:var(--muted)}
   </style>
 </head>
 
-<body>
+<body><div id="navbar"></div>
 
-<!-- NAVBAR -->
+<script>
+fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+
+
 <nav class="nav">
   <div class="container nav-inner">
 
@@ -157,13 +165,13 @@ p{color:var(--muted)}
   </div>
 </nav>
 
-<!-- CONTENUTO -->
+
 <main class="container hero">
   <h1>Fleet Management Aziendale</h1>
   <p>Versione stabile e funzionante del sito.</p>
 </main>
 
-<!-- JS UNICO PULITO -->
+
 <script>
 const links = document.querySelectorAll(".nav-links a");
 
