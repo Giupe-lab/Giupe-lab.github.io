@@ -1,85 +1,5 @@
-<!doctype html>
-<html lang="it">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Navbar GV Fleet</title>
-
-  <style>
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(7,17,31,.78);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(255,255,255,.10);
-    }
-
-    .nav-inner {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-      width: min(1180px,92%);
-      margin: auto;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 900;
-      color: #f5f7fb;
-      text-decoration: none;
-    }
-
-    .logo img {
-      height: 41px;
-    }
-
-    .logo span {
-      color: #d7a84f;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-weight: 650;
-      font-size: .95rem;
-    }
-
-    .nav-links a {
-      color: #b8c4d6;
-      text-decoration: none;
-    }
-
-    .nav-links a:hover {
-      color: #ffffff;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 20px;
-      border-radius: 999px;
-      font-weight: 900;
-      text-decoration: none;
-    }
-
-    .btn.whatsapp {
-      background: linear-gradient(135deg,#1bd66f,#0fbf5a);
-      color: #05120b;
-    }
-  </style>
-</head>
-
-<body>
-
 <nav class="nav">
-  <div class="nav-inner">
+  <div class="container nav-inner">
 
     <a class="logo" href="index.html">
       <img src="logo.png" alt="GV Fleet Consulting">
@@ -94,7 +14,7 @@
       <a href="storychisiamo.html">Chi siamo</a>
 
       <a class="btn whatsapp"
-         href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20consulenza%20per%20la%20mia%20flotta"
+         href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20consulenza"
          target="_blank">
         WhatsApp
       </a>
@@ -102,6 +22,3 @@
 
   </div>
 </nav>
-
-</body>
-</html>
