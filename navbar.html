@@ -1,3 +1,98 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navbar</title>
+
+  <style>
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(7,17,31,.78);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+
+    .container {
+      width: min(1180px,92%);
+      margin: auto;
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      color: #f5f7fb;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 41px;
+      width: auto;
+      display: block;
+    }
+
+    .logo span {
+      color: #d7a84f;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-weight: 650;
+      font-size: .95rem;
+    }
+
+    .nav-links a {
+      color: #b8c4d6;
+      text-decoration: none;
+      transition: .2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 900;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn.whatsapp {
+      background: linear-gradient(135deg,#1bd66f,#0fbf5a);
+      color: #05120b;
+      box-shadow: 0 10px 25px rgba(27,214,111,.18);
+    }
+
+    .active {
+      color: #ffffff !important;
+      border-bottom: 2px solid #d7a84f;
+      padding-bottom: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
 <nav class="nav">
   <div class="container nav-inner">
 
@@ -22,3 +117,15 @@
 
   </div>
 </nav>
+
+<script>
+  const links = document.querySelectorAll(".nav-links a");
+  links.forEach(a => {
+    if (a.href === window.location.href) {
+      a.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>
