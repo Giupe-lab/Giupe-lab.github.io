@@ -12,7 +12,25 @@
     .nav{position:sticky;top:0;z-index:999;background:rgba(7,17,31,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);transition:transform .35s ease,background .35s ease}
     .nav.scrolled{background:rgba(7,17,31,.94);box-shadow:0 16px 40px rgba(0,0,0,.25)}
     .nav-inner{min-height:60px;padding:8px 0;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .logo{display:flex;align-items:center;gap:8px;font-weight:900}.logo img{height:32px;width:auto;display:block}
+   .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+}
+
+.logo img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.nav-inner {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
     .nav-links{display:flex;flex-wrap:wrap;gap:16px;align-items:center;color:var(--muted);font-weight:700}.nav-links a{position:relative}.nav-links a:hover,.nav-links a.active{color:#fff}
     .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:width .25s}.nav-links a:hover::after,.nav-links a.active::after{width:100%}
     .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;font-weight:900;border:1px solid transparent}
