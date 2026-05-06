@@ -221,10 +221,7 @@ option{color:#07111f}
       <a href="case-study.html">Case Study</a>
       <a href="storychisiamo.html">Chi siamo</a>
 
-      <a class="btn whatsapp"
-         href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20consulenza%20per%20la%20mia%20flotta"
-         target="_blank"
-         rel="noopener">
+      <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20consulenza%20per%20la%20mia%20flotta" target="_blank" rel="noopener">
         WhatsApp
       </a>
     </div>
@@ -232,67 +229,17 @@ option{color:#07111f}
   </div>
 </nav>
 
-
-<main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Fleet management premium per aziende</div>
-        <h1>Trasformiamo la mobilità aziendale in un vantaggio competitivo.</h1>
-        <p class="lead">Analizziamo, ottimizziamo e gestiamo soluzioni di noleggio lungo termine per PMI, professionisti e imprese che vogliono ridurre costi, tempi e complessità.</p>
-        <div class="actions">
-          <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20ottimizzare%20la%20mia%20flotta%20aziendale" target="_blank" rel="noopener">Richiedi consulenza gratuita</a>
-          <a class="btn secondary" href="simulatore.html">Calcola una stima</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <span class="badge">Metodo consulenziale</span>
-        <h3>Non vendiamo solo auto. Costruiamo una strategia di mobilità.</h3>
-        <p>Confronto multi-brand, scelta dei veicoli, durata, chilometraggio, servizi inclusi, gestione rinnovi e supporto operativo.</p>
-        <div class="metric-grid">
-          <div class="metric"><strong>-22%</strong><span>potenziale riduzione costi operativi</span></div>
-          <div class="metric"><strong>100%</strong><span>canone prevedibile e servizi inclusi</span></div>
-          <div class="metric"><strong>Multi</strong><span>brand, alimentazioni e segmenti</span></div>
-          <div class="metric"><strong>1</strong><span>referente per tutta la flotta</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <div><div class="eyebrow">Cosa facciamo</div><h2>Soluzioni complete per ogni esigenza aziendale.</h2></div>
-        <p>Dalla singola auto professionale alla flotta strutturata: progettiamo la soluzione migliore per budget, immagine, percorrenza e operatività.</p>
-      </div>
-      <div class="grid grid-3">
-        <article class="card"><div class="icon">↗</div><h3>Auto aziendali</h3><p>City car, berline e SUV per team commerciali, tecnici, amministratori e professionisti.</p></article>
-        <article class="card"><div class="icon">◆</div><h3>Veicoli rappresentanza</h3><p>Soluzioni premium per immagine, comfort, sicurezza e valore percepito dal cliente.</p></article>
-        <article class="card"><div class="icon">▣</div><h3>Commerciali leggeri</h3><p>Furgoni, van e mezzi operativi per consegne, assistenza tecnica e attività sul territorio.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container band">
-      <div>
-        <div class="eyebrow">Il nostro vantaggio</div>
-        <h2>Più controllo, meno imprevisti, decisioni più intelligenti.</h2>
-        <p>Ti aiutiamo a evitare scelte costose: anticipo non necessario, chilometraggio sbagliato, segmento non adatto, canoni non confrontabili.</p>
-      </div>
-      <a class="btn" href="fleet.html">Scopri la flotta</a>
-    </div>
-  </section>
-</main>
-
-
-<footer class="footer">
-  <div class="container footer-inner">
-    <div><strong>GV Fleet Consulting</strong><br>Fleet management e noleggio lungo termine per aziende, PMI e Partite IVA.</div>
-    <div>Consulenza indipendente multi-brand · Analisi costi · Soluzioni su misura</div>
-  </div>
-</footer>
 <script>
+  // evidenzia pagina attiva
+  const links = document.querySelectorAll(".nav-links a");
+  links.forEach(a => {
+    if (a.href === window.location.href) {
+      a.style.color = "#ffffff";
+      a.style.fontWeight = "900";
+      a.style.borderBottom = "2px solid #d7a84f";
+    }
+  });
+</script>
 let lastScrollTop = 0;
 const nav = document.querySelector('.nav');
 
