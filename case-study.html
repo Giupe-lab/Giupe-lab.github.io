@@ -86,6 +86,18 @@ label{display:block;font-weight:900;margin:14px 0 7px}input,select{width:100%;pa
   }
 
 }@media(max-width:900px){.hero-grid,.grid-2,.grid-3,.grid-4,.form-grid{grid-template-columns:1fr}.section-head,.band{display:block}.nav-inner{align-items:flex-start;display:block}.nav-links{margin-top:12px;gap:12px}.hero{padding-top:58px}.cta-row{grid-template-columns:1fr}}
+.footer-grid{
+  display:grid !important;
+  grid-template-columns:repeat(4,1fr) !important;
+  gap:40px !important;
+  align-items:start;
+}
+
+@media(max-width:900px){
+  .footer-grid{
+    grid-template-columns:1fr !important;
+  }
+}
 </style>
 
 </head>
