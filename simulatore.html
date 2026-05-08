@@ -48,40 +48,26 @@ label{display:block;font-weight:900;margin:14px 0 7px}input,select,textarea{widt
 }
 
 .footer-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:40px;
-  align-items:start;
+  display:grid !important;
+  grid-template-columns:repeat(4,1fr) !important;
+  gap:40px !important;
+  align-items:start !important;
 }
 
-.footer h4{
-  margin-bottom:16px;
-  color:#fff;
+.footer-grid div{
+  display:block !important;
 }
 
-.footer p,
 .footer a{
-  color:var(--muted);
-  text-decoration:none;
   display:block;
   margin-bottom:10px;
-  transition:.2s;
-}
-
-.footer a:hover{
-  color:#fff;
-}
-
-.footer-bottom{
-  margin-top:40px;
-  padding-top:20px;
-  border-top:1px solid var(--line);
-  text-align:center;
-  color:var(--muted);
-  font-size:.9rem;
 }
 
 @media(max-width:900px){
+  .footer-grid{
+    grid-template-columns:1fr !important;
+  }
+}
 
   .footer-grid{
     grid-template-columns:1fr;
@@ -179,10 +165,7 @@ label{display:block;font-weight:900;margin:14px 0 7px}input,select,textarea{widt
 
     <div>
       <h4>GV Fleet Consulting</h4>
-      <p>
-        Soluzioni di noleggio lungo termine e consulenza flotte
-        per aziende, professionisti e Partite IVA.
-      </p>
+      <p>Soluzioni di noleggio lungo termine e consulenza flotte per aziende, professionisti e Partite IVA.</p>
     </div>
 
     <div>
@@ -191,26 +174,18 @@ label{display:block;font-weight:900;margin:14px 0 7px}input,select,textarea{widt
       <a href="fleet.html">La mia flotta</a>
       <a href="simulatore.html">Simulatore</a>
       <a href="storychisiamo.html">Chi siamo</a>
-<a href="privacy-policy.html">Privacy Policy</a>
+    </div>
 
     <div>
       <h4>Contatti</h4>
-      <a href="mailto:backoffice@gvsolutionssrls.it">
-        backoffice@gvsolutionssrls.it
-      </a>
-
-      <a href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20informazioni"
-         target="_blank">
-        WhatsApp
-      </a>
+      <a href="mailto:backoffice@gvsolutionssrls.it">backoffice@gvsolutionssrls.it</a>
+      <a href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20informazioni" target="_blank">WhatsApp</a>
     </div>
 
     <div>
       <h4>Legale</h4>
-      <a href="privacy-policy.html">
-    Privacy Policy
-  </a>
-
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
 
   </div>
 
