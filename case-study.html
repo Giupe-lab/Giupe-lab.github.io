@@ -30,7 +30,54 @@ h1{font-size:clamp(2.55rem,5vw,5.4rem);line-height:.98;letter-spacing:-.06em;mar
 .price{margin:18px 0;padding:16px;border-radius:20px;background:rgba(215,168,79,.13);border:1px solid rgba(215,168,79,.26)}.price small{display:block;color:var(--muted);font-weight:800}.price strong{display:block;font-size:1.5rem;color:#fff}.cta-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 label{display:block;font-weight:900;margin:14px 0 7px}input,select{width:100%;padding:14px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;outline:none}option{color:#07111f}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.result{margin-top:20px;padding:24px;border-radius:26px;background:rgba(32,201,151,.13);border:1px solid rgba(32,201,151,.30)}.result-price{font-size:2.6rem;font-weight:950;color:#fff;line-height:1;margin:8px 0}
 .footer{padding:38px 0;border-top:1px solid var(--line);color:var(--muted)}.footer-inner{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}
-@media(max-width:900px){.hero-grid,.grid-2,.grid-3,.grid-4,.form-grid{grid-template-columns:1fr}.section-head,.band{display:block}.nav-inner{align-items:flex-start;display:block}.nav-links{margin-top:12px;gap:12px}.hero{padding-top:58px}.cta-row{grid-template-columns:1fr}}
+.footer{
+  margin-top:80px;
+  padding:60px 0 30px;
+  border-top:1px solid var(--line);
+  background:rgba(0,0,0,.18);
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+}
+
+.footer h4{
+  margin-bottom:16px;
+  color:#fff;
+}
+
+.footer p,
+.footer a{
+  color:var(--muted);
+  text-decoration:none;
+  display:block;
+  margin-bottom:10px;
+  transition:.2s;
+}
+
+.footer a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  margin-top:40px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+@media(max-width:900px){
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+}@media(max-width:900px){.hero-grid,.grid-2,.grid-3,.grid-4,.form-grid{grid-template-columns:1fr}.section-head,.band{display:block}.nav-inner{align-items:flex-start;display:block}.nav-links{margin-top:12px;gap:12px}.hero{padding-top:58px}.cta-row{grid-template-columns:1fr}}
 </style>
 
 </head>
@@ -50,7 +97,49 @@ label{display:block;font-weight:900;margin:14px 0 7px}input,select{width:100%;pa
 <main><section class="hero"><div class="container hero-grid"><div><div class="eyebrow">Case Study</div><h1>Risultati concreti per aziende che vogliono più controllo.</h1><p class="lead">Esempi realistici di interventi su flotte aziendali: meno costi nascosti, più prevedibilità e gestione più semplice.</p></div><div class="hero-card"><h3>Il nostro approccio</h3><p>Analizziamo situazione attuale, costi reali, percorrenze, scadenze e utilizzo dei veicoli, poi proponiamo un piano migliorativo.</p></div></div></section><section class="section"><div class="container"><div class="grid grid-3"><article class="card"><span class="badge">PMI logistica · 5 veicoli</span><h3>-22% costi annui stimati</h3><p>Riorganizzazione contratti, scelta mezzi più coerenti e servizi inclusi per ridurre imprevisti.</p></article><article class="card"><span class="badge">Azienda servizi · 3 auto</span><h3>Flotta più professionale</h3><p>Passaggio da gestione frammentata a contratti NLT coerenti per commerciali e direzione.</p></article><article class="card"><span class="badge">Professionista · 1 SUV</span><h3>Scelta più efficiente</h3><p>Confronto tra acquisto, leasing e noleggio con configurazione ottimizzata.</p></article></div></div></section><section class="section"><div class="container band"><div><h2>Vuoi un risultato simile?</h2><p>Partiamo da una fotografia dei tuoi costi attuali e costruiamo una proposta migliorativa.</p></div><a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20un%20case%20study%20per%20la%20mia%20flotta" target="_blank">Richiedi analisi</a></div></section></main>
 
 
-<footer class="footer"><div class="container footer-inner"><div><strong>GV Fleet Consulting</strong><br>Fleet management e noleggio lungo termine per aziende, PMI e Partite IVA.</div><div>Consulenza indipendente multi-brand · Analisi costi · Soluzioni su misura</div></div></footer>
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <h4>GV Fleet Consulting</h4>
+      <p>
+        Soluzioni di noleggio lungo termine e consulenza flotte
+        per aziende, professionisti e Partite IVA.
+      </p>
+    </div>
+
+    <div>
+      <h4>Link utili</h4>
+      <a href="index.html">Home</a>
+      <a href="fleet.html">La mia flotta</a>
+      <a href="simulatore.html">Simulatore</a>
+      <a href="storychisiamo.html">Chi siamo</a>
+    </div>
+
+    <div>
+      <h4>Contatti</h4>
+      <a href="mailto:backoffice@gvsolutionssrls.it">
+        backoffice@gvsolutionssrls.it
+      </a>
+
+      <a href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20informazioni"
+         target="_blank">
+        WhatsApp
+      </a>
+    </div>
+
+    <div>
+      <h4>Legale</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 GV Fleet Consulting — Tutti i diritti riservati
+  </div>
+</footer>
 
 
 <script>
