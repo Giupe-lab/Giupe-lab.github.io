@@ -48,10 +48,9 @@ label{display:block;font-weight:900;margin:14px 0 7px}input,select,textarea{widt
 }
 
 .footer-grid{
-  display:grid !important;
-  grid-template-columns:repeat(4,1fr) !important;
-  gap:40px !important;
-  align-items:start;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
 }
 
 .footer h4{
@@ -84,10 +83,8 @@ label{display:block;font-weight:900;margin:14px 0 7px}input,select,textarea{widt
 @media(max-width:900px){
 
   .footer-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:40px;
-}
+    grid-template-columns:1fr;
+    gap:24px;
   }@media(max-width:900px){.hero-grid,.grid-3,.form-grid{grid-template-columns:1fr}.section-head,.band{display:block}.nav-inner{align-items:flex-start;display:block}.nav-links{margin-top:12px;gap:12px}.hero{padding-top:58px}}
 </style>
 </head>
@@ -155,7 +152,7 @@ label{display:block;font-weight:900;margin:14px 0 7px}input,select,textarea{widt
 </section>
 
 <section class="section" id="info">
-  <div class="container footer-grid">
+  <div class="container">
     <div class="section-head">
       <div><div class="eyebrow">Cosa valutiamo</div><h2>Una proposta corretta nasce dai dati giusti.</h2></div>
       <p>Per definire un canone reale servono informazioni su utilizzo, percorrenza, durata, servizi e livello di copertura desiderato.</p>
