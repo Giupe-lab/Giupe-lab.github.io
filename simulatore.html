@@ -71,6 +71,17 @@ label{display:block;font-weight:900;margin:14px 0 7px}input,select,textarea{widt
   color:var(--muted);
   font-size:.9rem;
 }
+  .privacy-note{
+  margin-top:18px;
+  font-size:.88rem;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.privacy-note a{
+  color:#fff;
+  text-decoration:underline;
+}
 @media(max-width:900px){
   .footer-grid{
     grid-template-columns:1fr !important;
@@ -131,7 +142,10 @@ label{display:block;font-weight:900;margin:14px 0 7px}input,select,textarea{widt
       <textarea id="note" placeholder="Es. preferenza SUV ibrido, no anticipo, consegna rapida..."></textarea>
 
       <button class="btn primary" style="width:100%;margin-top:18px" onclick="calculateFleet()">Aggiorna stima</button>
-
+<p class="privacy-note">
+Effettuando la richiesta dichiari di aver preso visione della
+<a href="privacy-policy.html">Privacy Policy</a>.
+</p>
       <div class="result">
         <p>Stima mensile indicativa</p>
         <div class="result-price" id="price">€ 1.395</div>
