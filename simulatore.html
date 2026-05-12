@@ -6,24 +6,45 @@
 <title>Simulatore Preventivo Flotta | GV Fleet Consulting</title>
 <meta name="description" content="Simula il costo indicativo della tua flotta aziendale e richiedi una proposta personalizzata.">
 
-<!-- ✅ NAVBAR CSS -->
+<!-- ✅ NAVBAR CSS ESTERNO (AGGIUNTO QUI) -->
 <link rel="stylesheet" href="navbar.css">
 
 <style>
 :root{--bg:#07111f;--line:rgba(255,255,255,.12);--text:#f5f7fb;--muted:#b8c4d6;--gold:#d7a84f;--gold2:#f2cc7b;--green:#20c997;--shadow:0 24px 70px rgba(0,0,0,.35)}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top right,rgba(77,163,255,.22),transparent 35%),radial-gradient(circle at top left,rgba(215,168,79,.20),transparent 28%),linear-gradient(180deg,var(--bg),#050912 72%);line-height:1.6}
-a{color:inherit;text-decoration:none}.container{width:min(1180px,92%);margin:auto}
+
+body{
+margin:0;
+font-family:Inter,Arial,sans-serif;
+color:var(--text);
+background:radial-gradient(circle at top right,rgba(77,163,255,.22),transparent 35%),
+radial-gradient(circle at top left,rgba(215,168,79,.20),transparent 28%),
+linear-gradient(180deg,var(--bg),#050912 72%);
+line-height:1.6;
+}
+
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}
+
+/* ===== resto tuo CSS invariato ===== */
 
 .hero{padding:92px 0 64px}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+
 .eyebrow{display:inline-flex;color:var(--gold2);font-weight:900;text-transform:uppercase;letter-spacing:.13em;font-size:.78rem;margin-bottom:14px}
+
 h1{font-size:clamp(2.55rem,5vw,5.4rem);line-height:.98;letter-spacing:-.06em;margin:0 0 22px}
+
 h2{font-size:clamp(2rem,3.6vw,3.35rem);line-height:1.05;letter-spacing:-.045em;margin:0 0 14px}
+
 h3{margin:0 0 10px;font-size:1.2rem}
+
 p{color:var(--muted);margin:0 0 18px}
+
 .lead{font-size:1.18rem;max-width:720px;color:#d8e1ef}
+
 .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
 
 .hero-card,.card,.band,.result{
@@ -33,14 +54,27 @@ box-shadow:var(--shadow)
 }
 
 .hero-card{padding:30px;border-radius:34px}
-.badge{display:inline-flex;padding:7px 11px;border-radius:999px;background:rgba(77,163,255,.14);color:#c8e6ff;font-size:.78rem;font-weight:900;margin-bottom:14px}
+
+.badge{
+display:inline-flex;
+padding:7px 11px;
+border-radius:999px;
+background:rgba(77,163,255,.14);
+color:#c8e6ff;
+font-size:.78rem;
+font-weight:900;
+margin-bottom:14px;
+}
 
 .section{padding:70px 0}
+
 .grid{display:grid;gap:18px}
 .grid-3{grid-template-columns:repeat(3,1fr)}
+
 .card{padding:26px;border-radius:28px}
 
 label{display:block;font-weight:900;margin:14px 0 7px}
+
 input,select,textarea{
 width:100%;
 padding:14px;
@@ -56,7 +90,13 @@ padding:60px 0 30px;
 border-top:1px solid var(--line);
 background:linear-gradient(180deg,rgba(8,18,34,.92),rgba(4,8,17,1));
 }
-.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+}
+
 .footer-bottom{
 margin-top:40px;
 padding-top:20px;
@@ -69,6 +109,13 @@ font-size:.9rem;
 @media(max-width:900px){
 .hero-grid,.grid-3,.form-grid{grid-template-columns:1fr}
 .footer-grid{grid-template-columns:1fr}
+}
+
+/* ✅ FIX LOGO NAVBAR (SPOSTATO NEL PUNTO GIUSTO) */
+.nav .logo img{
+  height:56px;
+  width:auto;
+  display:block;
 }
 </style>
 </head>
@@ -154,7 +201,7 @@ font-size:.9rem;
   <div class="footer-bottom">© 2026 GV Solutions</div>
 </footer>
 
-<!-- ❌ NIENTE CSS QUI SOTTO (ERA IL PROBLEMA) -->
+<script src="navbar.js"></script>
 
 </body>
 </html>
