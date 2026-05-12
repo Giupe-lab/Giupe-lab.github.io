@@ -1,21 +1,32 @@
-<!doctype html>
-<html lang="it">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<nav class="nav">
+  <div class="nav-inner">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <a class="logo" href="index.html">
+      <img src="logo.png" alt="Fleet Consulting Logo">
+      <span>Fleet Consulting</span>
+    </a>
+
+    <div class="nav-links">
+
+      <a href="index.html">Home</a>
+      <a href="fleet.html">La mia flotta</a>
+      <a href="simulatore.html">Simulatore</a>
+      <a href="case-study.html">Case Study</a>
+      <a href="storychisiamo.html">Chi siamo</a>
+      <a href="contact.html">Contatti</a>
+
+      <a class="btn-whatsapp"
+         href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20consulenza"
+         target="_blank">
+        WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+</nav>
 
 <style>
-
-/* ===== BASE ===== */
-body{
-  margin:0;
-  font-family:Inter, sans-serif;
-  background:#07111f;
-  color:white;
-}
-
 /* ===== NAVBAR ===== */
 .nav{
   position:sticky;
@@ -35,7 +46,6 @@ body{
   padding:18px 20px;
 }
 
-/* LOGO */
 .logo{
   display:flex;
   align-items:center;
@@ -45,15 +55,10 @@ body{
   color:white;
 }
 
-.logo img{
-  height:40px;
-}
+.logo img{height:40px;}
 
-.logo span{
-  color:#d7a84f;
-}
+.logo span{color:#d7a84f;}
 
-/* LINKS */
 .nav-links{
   display:flex;
   align-items:center;
@@ -71,7 +76,6 @@ body{
   color:white;
 }
 
-/* WHATSAPP BUTTON */
 .btn-whatsapp{
   background:linear-gradient(135deg,#1bd66f,#0fbf5a);
   padding:10px 16px;
@@ -79,55 +83,5 @@ body{
   color:#05120b !important;
   font-weight:900;
   text-decoration:none;
-  transition:0.3s;
 }
-
-.btn-whatsapp:hover{
-  transform:translateY(-2px);
-}
-
 </style>
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-<nav class="nav">
-  <div class="nav-inner">
-
-    <!-- LOGO -->
-    <a class="logo" href="index.html">
-      <img src="logo.png" alt="Fleet Consulting Logo">
-      <span>Fleet Consulting</span>
-    </a>
-
-    <!-- LINKS -->
-    <div class="nav-links">
-
-      <a href="index.html">Home</a>
-
-      <a href="fleet.html">La mia flotta</a>
-
-      <a href="simulatore.html">Simulatore</a>
-
-      <a href="case-study.html">Case Study</a>
-
-      <a href="storychisiamo.html">Chi siamo</a>
-
-      <!-- CONTATTI -->
-      <a href="contact.html">Contatti</a>
-
-      <!-- WHATSAPP -->
-      <a class="btn-whatsapp"
-         href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20consulenza"
-         target="_blank">
-        WhatsApp
-      </a>
-
-    </div>
-
-  </div>
-</nav>
-
-</body>
-</html>
