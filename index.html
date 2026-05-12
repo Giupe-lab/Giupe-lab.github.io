@@ -12,7 +12,7 @@
 body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top right,rgba(77,163,255,.22),transparent 35%),radial-gradient(circle at top left,rgba(215,168,79,.20),transparent 28%),linear-gradient(180deg,var(--bg),#050912 72%);line-height:1.6}
 a{color:inherit;text-decoration:none}.container{width:min(1180px,92%);margin:auto}
 
-/* ===== NAV (GESTITA DA navbar.js) ===== */
+/* ===== NAV (GESTITA GLOBALMENTE DA navbar.js) ===== */
 .nav{position:sticky;top:0;z-index:999;background:rgba(7,17,31,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);transition:transform .35s ease,background .35s ease,box-shadow .35s ease}
 .nav.scrolled{background:rgba(7,17,31,.94);box-shadow:0 16px 40px rgba(0,0,0,.25)}
 .nav-inner{min-height:64px;padding:8px 0;display:flex;align-items:center;justify-content:space-between;gap:20px}
@@ -102,7 +102,7 @@ font-size:.9rem;
 
 <body>
 
-<!-- NAVBAR CENTRALIZZATA -->
+<!-- NAVBAR CENTRALIZZATA (UNICA ORIGINE) -->
 <div id="navbar"></div>
 <script src="navbar.js"></script>
 
@@ -186,15 +186,6 @@ font-size:.9rem;
 
 <div class="footer-bottom">© 2026 GV Solutions</div>
 </footer>
-
-<script>
-let lastScrollTop=0;const nav=document.querySelector('.nav');
-window.addEventListener('scroll',function(){
-const currentScroll=window.pageYOffset||document.documentElement.scrollTop;
-if(currentScroll>80){nav.classList.add('scrolled')}else{nav.classList.remove('scrolled')}
-if(currentScroll>lastScrollTop&&currentScroll>140){nav.style.transform='translateY(-100%)'}else{nav.style.transform='translateY(0)'}
-lastScrollTop=currentScroll<=0?0:currentScroll});
-</script>
 
 </body>
 </html>
