@@ -1,7 +1,45 @@
-fetch("navbar.html")
-  .then(response => response.text())
-  .then(data => {
-    document.querySelectorAll("#navbar").forEach(el => {
-      el.innerHTML = data;
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.getElementById("navbar");
+
+  if (!el) return;
+
+  el.innerHTML = `
+    <nav class="nav">
+      <div class="container nav-inner">
+
+        <a class="logo" href="index.html">
+          <img src="logo.png" alt="GV Fleet Consulting">
+          <span>Fleet Consulting</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="fleet.html">Flotta</a>
+          <a href="simulatore.html">Simulatore</a>
+          <a href="storychisiamo.html">Chi siamo</a>
+
+          <a class="btn whatsapp"
+             href="https://api.whatsapp.com/send?text=Ciao%20info%20flotta"
+             target="_blank">
+            WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  `;
+
+  // highlight pagina attiva
+  const page = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".nav-links a").forEach(a => {
+    if (a.getAttribute("href") === page) {
+      a.classList.add("active");
+    }
   });
+
+  // scroll effect
+  const nav = document.querySelector(".nav");
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 80);
+  });
+});
