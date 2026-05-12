@@ -5,105 +5,234 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>La mia flotta | GV Fleet Consulting</title>
 <meta name="description" content="Soluzioni e categorie per flotte aziendali: city car, compatte ed executive premium.">
-
 <style>
 :root{--bg:#07111f;--line:rgba(255,255,255,.12);--text:#f5f7fb;--muted:#b8c4d6;--gold:#d7a84f;--gold2:#f2cc7b;--green:#20c997;--shadow:0 24px 70px rgba(0,0,0,.35)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top right,rgba(77,163,255,.18),transparent 34%),radial-gradient(circle at top left,rgba(215,168,79,.16),transparent 28%),linear-gradient(180deg,#050b16,#02050c 82%);line-height:1.6}
 a{color:inherit;text-decoration:none}.container{width:min(1180px,92%);margin:auto}
-
-/* ===== TUTTO IL TUO CSS INVARIATO ===== */
 .nav{position:sticky;top:0;z-index:999;background:rgba(7,17,31,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);transition:transform .35s ease,background .35s ease,box-shadow .35s ease}
 .nav.scrolled{background:rgba(7,17,31,.94);box-shadow:0 16px 40px rgba(0,0,0,.25)}
 .nav-inner{min-height:64px;padding:8px 0;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:900;white-space:nowrap}
-.logo img{height:56px;width:auto;display:block}
-.logo span{color:#fff}
-.nav-links{display:flex;flex-wrap:wrap;gap:16px;align-items:center;color:var(--muted);font-weight:700;font-size:.95rem}
-.nav-links a{position:relative;transition:all .2s ease}
-.nav-links a:hover,.nav-links a.active{color:#fff}
-.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:width .25s ease}
-.nav-links a:hover::after,.nav-links a.active::after{width:100%}
-
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border-radius:999px;font-weight:900;border:1px solid transparent;cursor:pointer}
-.btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#07111f}
-.btn.secondary{background:rgba(255,255,255,.08);color:#fff;border-color:var(--line)}
-.btn.whatsapp{background:linear-gradient(135deg,#19d96f,#0eb85a);color:#04130a}
-.btn.email{background:rgba(255,255,255,.08);color:#fff;border-color:var(--line)}
-
-/* resto invariato... */
-.hero{padding:92px 0 64px}
-.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
-.eyebrow{display:inline-flex;color:var(--gold2);font-weight:900;text-transform:uppercase;letter-spacing:.13em;font-size:.78rem;margin-bottom:14px}
-h1{font-size:clamp(2.55rem,5vw,5.4rem);line-height:.98;letter-spacing:-.06em;margin:0 0 22px}
-h2{font-size:clamp(2rem,3.6vw,3.35rem);line-height:1.05;letter-spacing:-.045em;margin:0 0 14px}
-h3{margin:0 0 10px;font-size:1.2rem}
-p{color:var(--muted);margin:0 0 18px}
-.lead{font-size:1.18rem;max-width:720px;color:#d8e1ef}
-.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-
-.hero-card,.card,.band{
-background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045));
-border:1px solid var(--line);
-box-shadow:var(--shadow)
-}
-
-.hero-card{padding:30px;border-radius:34px}
-.badge{display:inline-flex;padding:7px 11px;border-radius:999px;background:rgba(77,163,255,.14);color:#c8e6ff;font-size:.78rem;font-weight:900;margin-bottom:14px}
-
-.section{padding:70px 0}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:30px}
-.grid{display:grid;gap:18px}
-.grid-3{grid-template-columns:repeat(3,1fr)}
-.card{padding:26px;border-radius:28px;box-shadow:0 18px 48px rgba(0,0,0,.18);overflow:hidden}
-.band{padding:34px;border-radius:34px;background:linear-gradient(135deg,rgba(215,168,79,.16),rgba(77,163,255,.12));display:flex;align-items:center;justify-content:space-between;gap:22px}
-
-/* footer invariato */
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;white-space:nowrap}.logo img{height:56px;width:auto;display:block}.logo span{color:#fff}
+.nav-links{display:flex;flex-wrap:wrap;gap:16px;align-items:center;color:var(--muted);font-weight:700;font-size:.95rem}.nav-links a{position:relative;transition:all .2s ease}.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:width .25s ease}.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border-radius:999px;font-weight:900;border:1px solid transparent;cursor:pointer}.btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#07111f}.btn.secondary{background:rgba(255,255,255,.08);color:#fff;border-color:var(--line)}.btn.whatsapp{background:linear-gradient(135deg,#19d96f,#0eb85a);color:#04130a}.btn.email{background:rgba(255,255,255,.08);color:#fff;border-color:var(--line)}
+.hero{padding:92px 0 64px}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}.eyebrow{display:inline-flex;color:var(--gold2);font-weight:900;text-transform:uppercase;letter-spacing:.13em;font-size:.78rem;margin-bottom:14px}
+h1{font-size:clamp(2.55rem,5vw,5.4rem);line-height:.98;letter-spacing:-.06em;margin:0 0 22px}h2{font-size:clamp(2rem,3.6vw,3.35rem);line-height:1.05;letter-spacing:-.045em;margin:0 0 14px}h3{margin:0 0 10px;font-size:1.2rem}p{color:var(--muted);margin:0 0 18px}.lead{font-size:1.18rem;max-width:720px;color:#d8e1ef}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.hero-card,.card,.band{background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045));border:1px solid var(--line);box-shadow:var(--shadow)}
+.hero-card{padding:30px;border-radius:34px;position:relative;overflow:hidden}.badge{display:inline-flex;padding:7px 11px;border-radius:999px;background:rgba(77,163,255,.14);color:#c8e6ff;font-size:.78rem;font-weight:900;margin-bottom:14px}
+.section{padding:70px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:30px}.section-head p{max-width:640px}.grid{display:grid;gap:18px}.grid-3{grid-template-columns:repeat(3,1fr)}
+.card{padding:26px;border-radius:28px;box-shadow:0 18px 48px rgba(0,0,0,.18);overflow:hidden}.band{padding:34px;border-radius:34px;background:linear-gradient(135deg,rgba(215,168,79,.16),rgba(77,163,255,.12));display:flex;align-items:center;justify-content:space-between;gap:22px}
+.list{display:grid;gap:10px;margin:18px 0 0;padding:0;list-style:none;color:#dce6f5}.list li{display:flex;gap:10px}.list li:before{content:"✓";color:var(--green);font-weight:900}
+.car-photo{height:205px;border-radius:24px;margin-bottom:20px;overflow:hidden;border:1px solid var(--line);background:#111}
+.car-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}.card:hover .car-photo img{transform:scale(1.04)}
+.price{margin:18px 0;padding:16px;border-radius:20px;background:rgba(215,168,79,.13);border:1px solid rgba(215,168,79,.26)}.price small{display:block;color:var(--muted);font-weight:800}.price strong{display:block;font-size:1.5rem;color:#fff}.cta-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .footer{margin-top:80px;padding:60px 0 30px;border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(8,18,34,.92),rgba(4,8,17,1))}
 .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.footer h4{margin-bottom:16px;color:#fff}.footer p,.footer a{color:var(--muted);text-decoration:none;display:block;margin-bottom:10px;transition:.2s}.footer a:hover{color:#fff}
 .footer-bottom{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.9rem}
-
-@media(max-width:900px){
-.hero-grid,.grid-3{grid-template-columns:1fr}
-.footer-grid{grid-template-columns:1fr}
-.nav-inner{flex-direction:column;align-items:flex-start}
-}
+@media(max-width:900px){.hero-grid,.grid-3{grid-template-columns:1fr}.section-head,.band{display:block}.nav-inner{align-items:flex-start;display:block}.nav-links{margin-top:12px;gap:12px}.logo img{height:40px}.hero{padding-top:58px}.cta-row{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:24px}}
 </style>
 </head>
-
 <body>
-
-<!-- ✅ NAVBAR ESTERNA (AGGIUNTA SENZA TOCCARE IL RESTO) -->
-<link rel="stylesheet" href="navbar.css">
-<div id="navbar"></div>
-<script src="navbar.js"></script>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="index.html"><img src="logo.png" alt="GV Fleet Consulting"><span>Fleet Consulting</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="fleet.html">La mia flotta</a><a href="simulatore.html">Simulatore</a><a href="case-study.html">Case Study</a><a href="storychisiamo.html">Chi siamo</a>
+      <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20consulenza%20per%20la%20mia%20flotta" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</nav>
 
 <main>
-
-<!-- TUTTO IL TUO CONTENUTO IDENTICO -->
 <section class="hero">
   <div class="container hero-grid">
     <div>
       <div class="eyebrow">La mia flotta</div>
       <h1>Auto e veicoli per aziende che vogliono muoversi meglio.</h1>
-      <p class="lead">Una selezione ordinata e stabile per orientare il cliente verso la soluzione più adatta.</p>
+      <p class="lead">Una selezione ordinata e stabile per orientare il cliente verso la soluzione più adatta: city car, compatte ed executive premium.</p>
+      <div class="actions"><a class="btn primary" href="#city-car">Vedi city car</a><a class="btn secondary" href="#compatte">Vedi compatte</a><a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20proposta%20per%20la%20mia%20flotta%20aziendale" target="_blank">Richiedi proposta</a></div>
+    </div>
+    <div class="hero-card">
+      <h3>Soluzioni selezionate per aziende e professionisti.</h3>
+      <p>Una gamma pensata per chi cerca mobilità aziendale semplice, flessibile e professionale: dalla city car alla business class.</p>
+      <ul class="list"><li>Consulenza multi-brand</li><li>Canoni chiari e personalizzabili</li><li>Supporto su durata, km e servizi</li><li>Proposte su misura per flotte e Partite IVA</li></ul>
     </div>
   </div>
 </section>
 
-<!-- resto invariato -->
+<section class="section">
+  <div class="container band">
+    <div style="padding-left:30px;">
+      <div class="eyebrow">Nota sui canoni</div>
+      <h2>Canoni “da” indicativi.</h2>
+      <p>Valori da confermare con offerta reale in base a durata, km, anticipo, servizi e profilo cliente.</p>
+    </div>
+    <a class="btn primary" href="simulatore.html">Apri simulatore</a>
+  </div>
+</section>
+
+<section class="section" id="city-car">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">City car</div><h2>Utilitarie aziendali.</h2></div><p>Soluzioni agili, efficienti e ideali per città, consulenti, dipendenti e utilizzo quotidiano aziendale.</p></div>
+    <div class="grid grid-3">
+      <article class="card"><div class="car-photo"><img src="https://www.fiat.it/content/dam/fiat2023/cross/model-range/new-500-hybrid/mobile.jpg" alt="Fiat 500 Hybrid"></div><span class="badge">City premium</span><h3>Fiat 500 Hybrid</h3><p>Iconica, compatta e ideale per un utilizzo urbano con immagine curata.</p><div class="price"><small>Canone indicativo</small><strong>da € 289/mese</strong></div><div class="cta-row"><a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20quotazione%20per%20Fiat%20500%20Hybrid" target="_blank">WhatsApp</a><a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta Fiat 500 Hybrid">Email</a></div></article>
+      <article class="card"><div class="car-photo"><img src="https://www.fiat.it/content/dam/fiat2023/cross/model-header/pandina/mobile.jpg" alt="Fiat Pandina"></div><span class="badge">Operativa</span><h3>Fiat Pandina</h3><p>Pratica, concreta e perfetta per flotte urbane e attività quotidiane.</p><div class="price"><small>Canone indicativo</small><strong>da € 269/mese</strong></div><div class="cta-row"><a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20quotazione%20per%20Fiat%20Pandina" target="_blank">WhatsApp</a><a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta Fiat Pandina">Email</a></div></article>
+      <article class="card"><div class="car-photo"><img src="https://content.presspage.com/uploads/1523/509701a0-93ab-45ed-a3ff-da2d58286f99/800_aygoxonstage03.jpg?10000=" alt="Toyota Aygo X Hybrid"></div><span class="badge">Urban crossover</span><h3>Toyota Aygo X Hybrid</h3><p>Compatta, moderna e adatta a chi cerca efficienza e stile urbano.</p><div class="price"><small>Canone indicativo</small><strong>da € 289/mese</strong></div><div class="cta-row"><a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20quotazione%20per%20Toyota%20Aygo%20X%20Hybrid" target="_blank">WhatsApp</a><a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta Toyota Aygo X Hybrid">Email</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="compatte">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Compatte aziendali</div><h2>Compatte per business e consulenza.</h2></div><p>Auto versatili e professionali, ideali per commerciali, consulenti e aziende che cercano comfort, efficienza e immagine.</p></div>
+    <div class="grid grid-3">
+      <article class="card"><div class="car-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/VW%20Golf%201.5%20TSI%20GOAL%20%28VIII%2C%20Facelift%29%20%E2%80%93%20f%2031122024.jpg" alt="Volkswagen Golf"></div><span class="badge">Business hatchback</span><h3>Volkswagen Golf</h3><p>Solida, versatile e adatta a commerciali e consulenti sempre in movimento.</p><div class="price"><small>Canone indicativo</small><strong>da € 369/mese</strong></div><div class="cta-row"><a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20quotazione%20per%20Volkswagen%20Golf" target="_blank">WhatsApp</a><a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta Volkswagen Golf">Email</a></div></article>
+      <article class="card"><div class="car-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/2022%20-%20Peugeot%20308%20III%20%28C%29%20-%20081.jpg" alt="Peugeot 308"></div><span class="badge">Comfort business</span><h3>Peugeot 308</h3><p>Design moderno, interni curati e ottimo equilibrio tra comfort e canone.</p><div class="price"><small>Canone indicativo</small><strong>da € 389/mese</strong></div><div class="cta-row"><a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20quotazione%20per%20Peugeot%20308" target="_blank">WhatsApp</a><a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta Peugeot 308">Email</a></div></article>
+      <article class="card"><div class="car-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/2019%20Toyota%20Corolla%20Design%20VVT-i%20HEV%201.8%20Front.jpg" alt="Toyota Corolla Hybrid"></div><span class="badge">Hybrid efficiency</span><h3>Toyota Corolla Hybrid</h3><p>Affidabile, efficiente e ideale per percorrenze frequenti con consumi contenuti.</p><div class="price"><small>Canone indicativo</small><strong>da € 419/mese</strong></div><div class="cta-row"><a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20quotazione%20per%20Toyota%20Corolla%20Hybrid" target="_blank">WhatsApp</a><a class="btn email" href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta Toyota Corolla Hybrid">Email</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="executive">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Executive premium</div><h2>Business class e rappresentanza.</h2></div><p>Soluzioni premium per direzione, consulenti, imprenditori e aziende che vogliono un’immagine più elegante e strutturata.</p></div>
+    <div class="grid grid-3">
+      <article class="card">
+
+  <div class="car-photo">
+   <img src="images/audi-a4.jpg" alt="Audi A4">
+  </div>
+
+  <span class="badge">Executive</span>
+
+  <h3>Audi A4</h3>
+
+  <p>
+    Elegante, aziendale e perfetta per rappresentanza
+    e lunghe percorrenze.
+  </p>
+
+  <div class="price">
+    <small>Canone indicativo</small>
+    <strong>da € 589/mese</strong>
+  </div>
+
+  <div class="cta-row">
+
+    <a class="btn whatsapp"
+    href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20quotazione%20per%20Audi%20A4"
+    target="_blank">
+    WhatsApp
+    </a>
+
+    <a class="btn email"
+    href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta Audi A4">
+    Email
+    </a>
+
+  </div>
+
+</article>
+     
+
+<article class="card">
+
+  <div class="car-photo">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/BMW%20G20%20IMG%200374.jpg" alt="BMW Serie 3">
+  </div>
+
+  <span class="badge">Sport business</span>
+
+  <h3>BMW Serie 3</h3>
+
+  <p>
+    Premium dinamica per professionisti e aziende orientate alla performance.
+  </p>
+
+  <div class="price">
+    <small>Canone indicativo</small>
+    <strong>da € 669/mese</strong>
+  </div>
+
+  <div class="cta-row">
+
+    <a class="btn whatsapp"
+    href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20quotazione%20per%20BMW%20Serie%203"
+    target="_blank">
+    WhatsApp
+    </a>
+
+    <a class="btn email"
+    href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta BMW Serie 3">
+    Email
+    </a>
+
+  </div>
+
+</article>
+
+<article class="card">
+
+  <div class="car-photo">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Alfa%20Romeo%20Stelvio%20Q4%20Type%20949%20FL%20Grigio%20Moonlight%20%282%29.jpg" alt="Alfa Romeo Stelvio">
+  </div>
+
+  <span class="badge">Premium SUV</span>
+
+  <h3>Alfa Romeo Stelvio</h3>
+
+  <p>
+    SUV italiano elegante e scenico, ideale per una flotta executive moderna.
+  </p>
+
+  <div class="price">
+    <small>Canone indicativo</small>
+    <strong>da € 699/mese</strong>
+  </div>
+
+  <div class="cta-row">
+
+    <a class="btn whatsapp"
+    href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20quotazione%20per%20Alfa%20Romeo%20Stelvio"
+    target="_blank">
+    WhatsApp
+    </a>
+
+    <a class="btn email"
+    href="mailto:backoffice@gvsolutionssrls.it?subject=Richiesta Alfa Romeo Stelvio">
+    Email
+    </a>
+
+  </div>
+
+</article>
+</section>
+
+<section class="section">
+  <div class="container band">
+    <div><h2>Vuoi costruire una flotta su misura?</h2><p>Indicaci numero mezzi, percorrenza, durata e categoria: ti aiutiamo a trovare la soluzione più efficiente.</p></div>
+    <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20costruire%20una%20flotta%20aziendale%20su%20misura" target="_blank">Richiedi consulenza</a>
+  </div>
+</section>
 </main>
 
 <footer class="footer">
   <div class="container footer-grid">
-    <div>
-      <h4>GV Fleet Consulting</h4>
-      <p>Soluzioni di noleggio lungo termine.</p>
-    </div>
+    <div><h4>GV Fleet Consulting</h4><p>Soluzioni di noleggio lungo termine e consulenza flotte per aziende, professionisti e Partite IVA.</p></div>
+    <div><h4>Link utili</h4><a href="index.html">Home</a><a href="fleet.html">La mia flotta</a><a href="simulatore.html">Simulatore</a><a href="storychisiamo.html">Chi siamo</a></div>
+    <div><h4>Contatti</h4><a href="mailto:backoffice@gvsolutionssrls.it">backoffice@gvsolutionssrls.it</a><a href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20informazioni" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div><h4>Legale</h4><a href="privacy-policy.html">Privacy Policy</a></div>
   </div>
   <div class="footer-bottom">© 2026 GV Solutions — Tutti i diritti riservati</div>
 </footer>
 
+<script>
+let lastScrollTop=0;const nav=document.querySelector('.nav');
+window.addEventListener('scroll',function(){const currentScroll=window.pageYOffset||document.documentElement.scrollTop;if(currentScroll>80){nav.classList.add('scrolled')}else{nav.classList.remove('scrolled')}if(currentScroll>lastScrollTop&&currentScroll>140){nav.style.transform='translateY(-100%)'}else{nav.style.transform='translateY(0)'}lastScrollTop=currentScroll<=0?0:currentScroll});
+const links=document.querySelectorAll('.nav-links a');const currentPage=window.location.pathname.split("/").pop();links.forEach(link=>{const linkPage=link.getAttribute('href');if(linkPage===currentPage||(currentPage===""&&linkPage==="index.html")){link.classList.add('active')}});
+</script>
 </body>
 </html>
