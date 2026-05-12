@@ -1,0 +1,235 @@
+<!-- CONTACT SECTION -->
+
+<section class="contact-section">
+
+  <div class="contact-info">
+
+    <span class="contact-tag">
+      Fleet Consulting
+    </span>
+
+    <h2>
+      Richiedi una consulenza
+    </h2>
+
+    <p>
+      Contattaci per ricevere supporto dedicato
+      e trovare la soluzione migliore per la mobilità
+      e la gestione della tua flotta aziendale.
+    </p>
+
+    <div class="contact-details">
+
+      <div class="detail-box">
+        <h4>Email</h4>
+        <p>info@fleetconsulting.it</p>
+      </div>
+
+      <div class="detail-box">
+        <h4>Telefono</h4>
+        <p>+39 123 456 789</p>
+      </div>
+
+      <div class="detail-box">
+        <h4>Sede</h4>
+        <p>Milano, Italia</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <form 
+    class="contact-form"
+    action="https://formspree.io/f/TUO-ID"
+    method="POST"
+  >
+
+    <input 
+      type="text"
+      name="name"
+      placeholder="Nome e Cognome"
+      required
+    >
+
+    <input 
+      type="email"
+      name="email"
+      placeholder="Email Aziendale"
+      required
+    >
+
+    <input 
+      type="text"
+      name="company"
+      placeholder="Azienda"
+    >
+
+    <textarea
+      name="message"
+      rows="7"
+      placeholder="Descrivi la tua richiesta..."
+      required
+    ></textarea>
+
+    <button type="submit">
+      Richiedi consulenza
+    </button>
+
+  </form>
+
+</section>
+/* CONTACT SECTION */
+
+.contact-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+
+    max-width:1200px;
+    margin:auto;
+    padding:120px 20px;
+
+    align-items:center;
+}
+
+.contact-tag{
+    display:inline-block;
+
+    padding:10px 18px;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:999px;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+    color:#d0d0d0;
+}
+
+.contact-info h2{
+    font-size:64px;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+}
+
+.contact-info p{
+    color:#b0b0b0;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+    max-width:500px;
+}
+
+.contact-details{
+    margin-top:50px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:25px;
+}
+
+.detail-box h4{
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    color:white;
+}
+
+.detail-box p{
+    color:#909090;
+
+    font-size:15px;
+}
+
+
+
+/* FORM */
+
+.contact-form{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:white;
+
+    transform:translateY(-2px);
+}
+
+.contact-form button{
+    background:white;
+
+    color:black;
+
+    border:none;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+.contact-form button:hover{
+    transform:translateY(-3px);
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .contact-section{
+        grid-template-columns:1fr;
+
+        gap:60px;
+    }
+
+    .contact-info h2{
+        font-size:42px;
+    }
+
+}
