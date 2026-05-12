@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const navbar = `
+  const el = document.getElementById("navbar");
+  if (!el) return;
+
+  el.innerHTML = `
 <nav class="nav">
   <div class="container nav-inner">
+
     <a class="logo" href="index.html">
       <img src="logo.png" alt="GV Fleet Consulting">
       <span>Fleet Consulting</span>
@@ -16,42 +20,27 @@ document.addEventListener("DOMContentLoaded", () => {
       <a href="contatti.html">Contatti</a>
 
       <a class="btn whatsapp"
-         href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20informazioni"
-         target="_blank" rel="noopener">
+         href="https://api.whatsapp.com/send?text=Ciao%20info%20flotta"
+         target="_blank">
         WhatsApp
       </a>
     </div>
+
   </div>
 </nav>
 `;
 
-  document.getElementById("navbar").innerHTML = navbar;
-
-  const nav = document.querySelector(".nav");
-  let lastScroll = 0;
-
-  window.addEventListener("scroll", () => {
-    const current = window.pageYOffset;
-
-    if (current > 80) nav.classList.add("scrolled");
-    else nav.classList.remove("scrolled");
-
-    if (current > lastScroll && current > 140) {
-      nav.style.transform = "translateY(-100%)";
-    } else {
-      nav.style.transform = "translateY(0)";
-    }
-
-    lastScroll = current;
-  });
-
-  const links = document.querySelectorAll(".nav-links a");
   const page = window.location.pathname.split("/").pop();
 
-  links.forEach(a => {
-    if (a.getAttribute("href") === page ||
-        (page === "" && a.getAttribute("href") === "index.html")) {
+  document.querySelectorAll(".nav-links a").forEach(a => {
+    if (a.getAttribute("href") === page) {
       a.classList.add("active");
     }
+  });
+
+  const nav = document.querySelector(".nav");
+
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 80);
   });
 });
