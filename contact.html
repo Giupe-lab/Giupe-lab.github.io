@@ -1,46 +1,38 @@
-<!-- CONTACT SECTION -->
+<section class="contact-hero">
+  <h1>Contattaci</h1>
+  <p>
+    Parla con Fleet Consulting e scopri come possiamo aiutarti
+    a migliorare la gestione della tua flotta aziendale.
+  </p>
+</section>
 
-<section class="contact-section">
 
-  <div class="contact-info">
+<section class="contact-wrapper">
 
-    <span class="contact-tag">
-      Fleet Consulting
-    </span>
+  <!-- INFO AZIENDA -->
+  <div class="info-box">
 
-    <h2>
-      Richiedi una consulenza
-    </h2>
+    <h2>Fleet Consulting</h2>
 
     <p>
-      Contattaci per ricevere supporto dedicato
-      e trovare la soluzione migliore per la mobilità
-      e la gestione della tua flotta aziendale.
+      Soluzioni professionali per la gestione, ottimizzazione
+      e controllo delle flotte aziendali.
     </p>
 
-    <div class="contact-details">
+    <div class="info">
+      <p><strong>Email:</strong> info@fleetconsulting.it</p>
+      <p><strong>Telefono:</strong> +39 123 456 789</p>
+      <p><strong>Sede:</strong> Italia</p>
+    </div>
 
-      <div class="detail-box">
-        <h4>Email</h4>
-        <p>info@fleetconsulting.it</p>
-      </div>
-
-      <div class="detail-box">
-        <h4>Telefono</h4>
-        <p>+39 123 456 789</p>
-      </div>
-
-      <div class="detail-box">
-        <h4>Sede</h4>
-        <p>Milano, Italia</p>
-      </div>
-
+    <div class="note">
+      Rispondiamo entro 24 ore lavorative.
     </div>
 
   </div>
 
 
-
+  <!-- FORM CONTATTI -->
   <form 
     class="contact-form"
     action="https://formspree.io/f/TUO-ID"
@@ -48,188 +40,149 @@
   >
 
     <input 
-      type="text"
-      name="name"
-      placeholder="Nome e Cognome"
+      type="text" 
+      name="name" 
+      placeholder="Nome e Cognome" 
       required
     >
 
     <input 
-      type="email"
-      name="email"
-      placeholder="Email Aziendale"
+      type="email" 
+      name="email" 
+      placeholder="Email aziendale" 
       required
     >
 
     <input 
-      type="text"
-      name="company"
-      placeholder="Azienda"
+      type="text" 
+      name="company" 
+      placeholder="Azienda (opzionale)"
     >
 
-    <textarea
-      name="message"
-      rows="7"
-      placeholder="Descrivi la tua richiesta..."
+    <textarea 
+      name="message" 
+      rows="6"
+      placeholder="Scrivi la tua richiesta..."
       required
     ></textarea>
 
     <button type="submit">
-      Richiedi consulenza
+      Invia richiesta
     </button>
 
   </form>
 
 </section>
-/* CONTACT SECTION */
 
-.contact-section{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
 
-    max-width:1200px;
-    margin:auto;
-    padding:120px 20px;
+<style>
 
-    align-items:center;
+body{
+  margin:0;
+  font-family:Inter, sans-serif;
+  background:#07111f;
+  color:#f5f7fb;
 }
 
-.contact-tag{
-    display:inline-block;
-
-    padding:10px 18px;
-
-    background:rgba(255,255,255,0.05);
-
-    border:1px solid rgba(255,255,255,0.08);
-
-    border-radius:999px;
-
-    margin-bottom:25px;
-
-    font-size:14px;
-
-    color:#d0d0d0;
+/* HERO */
+.contact-hero{
+  text-align:center;
+  padding:100px 20px 40px;
+  max-width:900px;
+  margin:auto;
 }
 
-.contact-info h2{
-    font-size:64px;
-
-    line-height:1.1;
-
-    margin-bottom:25px;
+.contact-hero h1{
+  font-size:3rem;
+  margin-bottom:10px;
 }
 
-.contact-info p{
-    color:#b0b0b0;
-
-    line-height:1.8;
-
-    font-size:17px;
-
-    max-width:500px;
+.contact-hero p{
+  color:#b8c4d6;
+  line-height:1.6;
 }
 
-.contact-details{
-    margin-top:50px;
-
-    display:flex;
-    flex-direction:column;
-
-    gap:25px;
+/* LAYOUT */
+.contact-wrapper{
+  max-width:1100px;
+  margin:60px auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  padding:0 20px;
 }
 
-.detail-box h4{
-    margin-bottom:8px;
-
-    font-size:15px;
-
-    color:white;
+/* INFO BOX */
+.info-box{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:30px;
+  border-radius:18px;
 }
 
-.detail-box p{
-    color:#909090;
-
-    font-size:15px;
+.info-box h2{
+  color:#d7a84f;
+  margin-bottom:10px;
 }
 
+.info-box p{
+  color:#b8c4d6;
+  line-height:1.6;
+}
 
+.info p{
+  margin:8px 0;
+}
+
+.note{
+  margin-top:20px;
+  font-size:14px;
+  color:#6f7c90;
+}
 
 /* FORM */
-
 .contact-form{
-    display:flex;
-
-    flex-direction:column;
-
-    gap:22px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
 }
 
-.contact-form input,
-.contact-form textarea{
-    background:rgba(255,255,255,0.03);
-
-    border:1px solid rgba(255,255,255,0.08);
-
-    border-radius:18px;
-
-    padding:20px;
-
-    color:white;
-
-    font-size:16px;
-
-    outline:none;
-
-    transition:0.3s ease;
+input, textarea{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:14px;
+  padding:16px;
+  color:white;
+  font-size:15px;
+  outline:none;
+  transition:0.3s;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus{
-    border-color:white;
-
-    transform:translateY(-2px);
+input:focus,
+textarea:focus{
+  border-color:#d7a84f;
 }
 
-.contact-form button{
-    background:white;
-
-    color:black;
-
-    border:none;
-
-    padding:20px;
-
-    border-radius:18px;
-
-    font-size:16px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:0.3s ease;
+button{
+  background:#d7a84f;
+  border:none;
+  padding:16px;
+  border-radius:14px;
+  font-weight:800;
+  cursor:pointer;
+  color:#07111f;
+  transition:0.3s;
 }
 
-.contact-form button:hover{
-    transform:translateY(-3px);
+button:hover{
+  transform:translateY(-2px);
 }
-
-
 
 /* MOBILE */
-
 @media(max-width:900px){
-
-    .contact-section{
-        grid-template-columns:1fr;
-
-        gap:60px;
-    }
-
-    .contact-info h2{
-        font-size:42px;
-    }
-
+  .contact-wrapper{
+    grid-template-columns:1fr;
+  }
 }
+
+</style>
