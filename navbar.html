@@ -1,142 +1,188 @@
-<!doctype html>
-<html lang="it">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<section class="contact-hero">
+  <h1>Contattaci</h1>
+  <p>
+    Parla con Fleet Consulting e scopri come possiamo aiutarti
+    a migliorare la gestione della tua flotta aziendale.
+  </p>
+</section>
 
-  <title>GV Fleet Consulting</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<section class="contact-wrapper">
 
-  <style>
+  <!-- INFO AZIENDA -->
+  <div class="info-box">
+
+    <h2>Fleet Consulting</h2>
+
+    <p>
+      Soluzioni professionali per la gestione, ottimizzazione
+      e controllo delle flotte aziendali.
+    </p>
+
+    <div class="info">
+      <p><strong>Email:</strong> info@fleetconsulting.it</p>
+      <p><strong>Telefono:</strong> +39 123 456 789</p>
+      <p><strong>Sede:</strong> Italia</p>
+    </div>
+
+    <div class="note">
+      Rispondiamo entro 24 ore lavorative.
+    </div>
+
+  </div>
+
+
+  <!-- FORM CONTATTI -->
+  <form 
+    class="contact-form"
+    action="https://formspree.io/f/TUO-ID"
+    method="POST"
+  >
+
+    <input 
+      type="text" 
+      name="name" 
+      placeholder="Nome e Cognome" 
+      required
+    >
+
+    <input 
+      type="email" 
+      name="email" 
+      placeholder="Email aziendale" 
+      required
+    >
+
+    <input 
+      type="text" 
+      name="company" 
+      placeholder="Azienda (opzionale)"
+    >
+
+    <textarea 
+      name="message" 
+      rows="6"
+      placeholder="Scrivi la tua richiesta..."
+      required
+    ></textarea>
+
+    <button type="submit">
+      Invia richiesta
+    </button>
+
+  </form>
+
+</section>
+
+
+<style>
 
 body{
   margin:0;
-  font-family:Inter,system-ui,sans-serif;
+  font-family:Inter, sans-serif;
   background:#07111f;
   color:#f5f7fb;
 }
 
-
-.nav{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:rgba(7,17,31,.75);
-  backdrop-filter:blur(20px);
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.nav-inner{
-  max-width:1200px;
+/* HERO */
+.contact-hero{
+  text-align:center;
+  padding:100px 20px 40px;
+  max-width:900px;
   margin:auto;
-  min-height:78px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 20px;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:900;
-}
-
-.logo img{
-  height:41px;
-}
-
-.logo span{
-  color:#d7a84f;
-}
-
-.nav-links{
-  display:flex;
-  gap:18px;
-  align-items:center;
-  font-weight:600;
-}
-
-.nav-links a{
-  color:#b8c4d6;
-  text-decoration:none;
-}
-
-.nav-links a:hover{
-  color:#fff;
-}
-
-.nav-links a.active{
-  color:#fff;
-  font-weight:900;
-  border-bottom:2px solid #d7a84f;
-  padding-bottom:2px;
-}
-
-
-.btn-whatsapp{
-  background:linear-gradient(135deg,#1bd66f,#0fbf5a);
-  padding:10px 16px;
-  border-radius:999px;
-  color:#05120b;
-  font-weight:900;
-  text-decoration:none;
-}
-
-
-main{
-  max-width:1200px;
-  margin:auto;
-  padding:60px 20px;
-}
-
-h1{
+.contact-hero h1{
   font-size:3rem;
   margin-bottom:10px;
 }
 
-p{
+.contact-hero p{
   color:#b8c4d6;
+  line-height:1.6;
 }
 
-  </style>
-</head>
+/* LAYOUT */
+.contact-wrapper{
+  max-width:1100px;
+  margin:60px auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  padding:0 20px;
+}
 
-<body>
+/* INFO BOX */
+.info-box{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:30px;
+  border-radius:18px;
+}
 
+.info-box h2{
+  color:#d7a84f;
+  margin-bottom:10px;
+}
 
-<nav class="nav">
-  <div class="nav-inner">
+.info-box p{
+  color:#b8c4d6;
+  line-height:1.6;
+}
 
-    <a class="logo" href="index.html">
-      <img src="logo.png" alt="logo">
-      <span>Fleet Consulting</span>
-    </a>
+.info p{
+  margin:8px 0;
+}
 
-    <div class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="fleet.html">La mia flotta</a>
-      <a href="simulatore.html">Simulatore</a>
-      <a href="case-study.html">Case Study</a>
-      <a href="storychisiamo.html">Chi siamo</a>
-      <a href="contact.html">Contatti</a>
-      <a class="btn-whatsapp"
-         href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20consulenza"
-         target="_blank">
-        WhatsApp
-      </a>
-    </div>
+.note{
+  margin-top:20px;
+  font-size:14px;
+  color:#6f7c90;
+}
 
-  </div>
-</nav>
+/* FORM */
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
 
+input, textarea{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:14px;
+  padding:16px;
+  color:white;
+  font-size:15px;
+  outline:none;
+  transition:0.3s;
+}
 
-<main>
-  <h1>Fleet Management</h1>
-  <p>Sito funzionante con navbar unica e stabile.</p>
-</main>
+input:focus,
+textarea:focus{
+  border-color:#d7a84f;
+}
 
-</body>
-</html>
+button{
+  background:#d7a84f;
+  border:none;
+  padding:16px;
+  border-radius:14px;
+  font-weight:800;
+  cursor:pointer;
+  color:#07111f;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:translateY(-2px);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .contact-wrapper{
+    grid-template-columns:1fr;
+  }
+}
+
+</style>
