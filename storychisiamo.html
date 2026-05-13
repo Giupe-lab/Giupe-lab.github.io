@@ -3,90 +3,216 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="navbar.css">
 
 <title>Chi siamo | GV Fleet Consulting</title>
-<meta name="description" content="Consulenti di mobilità aziendale.">
+<meta name="description" content="GV Fleet Consulting: consulenza per noleggio lungo termine, fleet management e mobilità aziendale per aziende, PMI e Partite IVA.">
 
 <style>
 :root{--bg:#07111f;--line:rgba(255,255,255,.12);--text:#f5f7fb;--muted:#b8c4d6;--gold:#d7a84f;--gold2:#f2cc7b;--green:#20c997;--shadow:0 24px 70px rgba(0,0,0,.35)}
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top right,rgba(77,163,255,.22),transparent 35%),radial-gradient(circle at top left,rgba(215,168,79,.20),transparent 28%),linear-gradient(180deg,var(--bg),#050912 72%);line-height:1.6}
-a{color:inherit;text-decoration:none}.container{width:min(1180px,92%);margin:auto}
-
-/* NAVBAR (ORA CENTRALIZZATA) */
-.nav{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:rgba(7,17,31,.86);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--line);
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  color:var(--text);
+  background:
+  radial-gradient(circle at top right,rgba(77,163,255,.18),transparent 34%),
+  radial-gradient(circle at top left,rgba(215,168,79,.16),transparent 28%),
+  linear-gradient(180deg,#050b16,#02050c 82%);
+  line-height:1.6;
 }
-.nav-inner{
-  min-height:64px;
-  padding:8px 0;
-  display:flex;
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}
+
+.btn{
+  display:inline-flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:center;
+  gap:10px;
+  padding:13px 18px;
+  border-radius:999px;
+  font-weight:900;
+  border:1px solid transparent;
+  cursor:pointer;
 }
-.logo{display:flex;align-items:center;gap:10px;font-weight:900}
-.logo img{height:56px}
-.logo span{color:#fff}
-.nav-links{display:flex;gap:16px;align-items:center;font-weight:700;color:var(--muted)}
-.nav-links a:hover{color:#fff}
+.btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#07111f}
+.btn.secondary{background:rgba(255,255,255,.08);color:#fff;border-color:var(--line)}
+.btn.whatsapp{background:linear-gradient(135deg,#19d96f,#0eb85a);color:#04130a}
 
-/* RESTO IDENTICO (NON TOCCATO) */
 .hero{padding:92px 0 64px}
 .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
-.eyebrow{display:inline-flex;color:var(--gold2);font-weight:900;text-transform:uppercase}
-h1{font-size:clamp(2.55rem,5vw,5.4rem);line-height:.98;margin:0 0 22px}
-p{color:var(--muted)}
-.lead{font-size:1.18rem;color:#d8e1ef}
+.eyebrow{
+  display:inline-flex;
+  color:var(--gold2);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-size:.78rem;
+  margin-bottom:14px;
+}
+h1{font-size:clamp(2.55rem,5vw,5.4rem);line-height:.98;letter-spacing:-.06em;margin:0 0 22px}
+h2{font-size:clamp(2rem,3.6vw,3.35rem);line-height:1.05;letter-spacing:-.045em;margin:0 0 14px}
+h3{margin:0 0 10px;font-size:1.2rem}
+p{color:var(--muted);margin:0 0 18px}
+.lead{font-size:1.18rem;color:#d8e1ef;max-width:740px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
 
+.hero-card,.card,.band,.timeline-item{
+  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045));
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
 .hero-card{
   padding:30px;
   border-radius:34px;
-  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045));
-  border:1px solid var(--line);
 }
-
 .metric-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:14px;
+  margin-top:20px;
 }
-
 .metric{
   padding:20px;
   border-radius:24px;
   background:rgba(255,255,255,.07);
   border:1px solid var(--line);
 }
+.metric strong{
+  display:block;
+  color:var(--gold2);
+  font-size:1.4rem;
+  margin-bottom:4px;
+}
+.metric span{
+  color:#dce6f5;
+  font-weight:800;
+}
 
 .section{padding:70px 0}
+.section-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:28px;
+  margin-bottom:30px;
+}
+.section-head p{max-width:640px}
 .grid{display:grid;gap:18px}
 .grid-3{grid-template-columns:repeat(3,1fr)}
 .card{
   padding:26px;
   border-radius:28px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.06);
+  box-shadow:0 18px 48px rgba(0,0,0,.18);
+}
+.badge{
+  display:inline-flex;
+  padding:7px 11px;
+  border-radius:999px;
+  background:rgba(77,163,255,.14);
+  color:#c8e6ff;
+  font-size:.78rem;
+  font-weight:900;
+  margin-bottom:14px;
+}
+
+.list{
+  display:grid;
+  gap:10px;
+  margin:18px 0 0;
+  padding:0;
+  list-style:none;
+  color:#dce6f5;
+}
+.list li{
+  display:flex;
+  gap:10px;
+}
+.list li:before{
+  content:"✓";
+  color:var(--green);
+  font-weight:900;
+}
+
+.timeline{
+  display:grid;
+  gap:18px;
+}
+.timeline-item{
+  padding:26px;
+  border-radius:28px;
+  display:grid;
+  grid-template-columns:90px 1fr;
+  gap:22px;
+  align-items:start;
+}
+.timeline-number{
+  width:58px;
+  height:58px;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(215,168,79,.15);
+  border:1px solid rgba(215,168,79,.30);
+  color:var(--gold2);
+  font-weight:950;
+  font-size:1.2rem;
+}
+
+.band{
+  padding:34px;
+  border-radius:34px;
+  background:linear-gradient(135deg,rgba(215,168,79,.16),rgba(77,163,255,.12));
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+}
+
+.footer{
+  margin-top:80px;
+  padding:60px 0 30px;
+  border-top:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(8,18,34,.92),rgba(4,8,17,1));
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+}
+.footer h4{margin-bottom:16px;color:#fff}
+.footer p,.footer a{
+  color:var(--muted);
+  text-decoration:none;
+  display:block;
+  margin-bottom:10px;
+  transition:.2s;
+}
+.footer a:hover{color:#fff}
+.footer-bottom{
+  margin-top:40px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
 }
 
 @media(max-width:900px){
   .hero-grid,.grid-3{grid-template-columns:1fr}
+  .section-head,.band{display:block}
+  .timeline-item{grid-template-columns:1fr}
+  .hero{padding-top:58px}
+  .footer-grid{grid-template-columns:1fr;gap:24px}
 }
 </style>
-
-<link rel="stylesheet" href="navbar.css">
-
 </head>
 
 <body>
 
-<!-- ✅ NAVBAR CENTRALIZZATA -->
 <div id="navbar"></div>
-<script src="navbar.js"></script>
 
 <main>
 
@@ -97,18 +223,27 @@ p{color:var(--muted)}
       <div class="eyebrow">Chi siamo</div>
       <h1>Consulenti di mobilità, non semplici intermediari.</h1>
       <p class="lead">
-        Aiutiamo aziende, professionisti e PMI a scegliere soluzioni di noleggio lungo termine.
+        GV Fleet Consulting nasce per aiutare aziende, professionisti e PMI a scegliere
+        soluzioni di noleggio lungo termine più chiare, sostenibili e coerenti con il reale utilizzo dei veicoli.
       </p>
+      <div class="actions">
+        <a class="btn primary" href="simulatore.html">Apri simulatore</a>
+        <a class="btn secondary" href="fleet.html">Scopri la flotta</a>
+        <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20conoscere%20meglio%20GV%20Fleet%20Consulting" target="_blank" rel="noopener">Contattaci</a>
+      </div>
     </div>
 
     <div class="hero-card">
       <h3>La nostra promessa</h3>
-      <p>Mobilità semplice e ottimizzata.</p>
+      <p>
+        Rendere la mobilità aziendale più semplice, leggibile e controllabile,
+        evitando scelte poco adatte e costi difficili da prevedere.
+      </p>
 
       <div class="metric-grid">
         <div class="metric"><strong>01</strong><span>Analisi</span></div>
-        <div class="metric"><strong>02</strong><span>Strategia</span></div>
-        <div class="metric"><strong>03</strong><span>Setup</span></div>
+        <div class="metric"><strong>02</strong><span>Confronto</span></div>
+        <div class="metric"><strong>03</strong><span>Proposta</span></div>
         <div class="metric"><strong>04</strong><span>Supporto</span></div>
       </div>
     </div>
@@ -117,27 +252,162 @@ p{color:var(--muted)}
 </section>
 
 <section class="section">
-  <div class="container grid grid-3">
-
-    <div class="card">
-      <h3>Ascolto</h3>
-      <p>Analisi esigenze aziendali.</p>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Metodo</div>
+        <h2>Prima capiamo l’azienda, poi scegliamo i veicoli.</h2>
+      </div>
+      <p>
+        Ogni flotta ha esigenze diverse: percorrenze, ruoli, immagine aziendale,
+        budget, servizi inclusi e gestione operativa.
+      </p>
     </div>
 
-    <div class="card">
-      <h3>Strategia</h3>
-      <p>Soluzioni su misura.</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <span class="badge">Ascolto</span>
+        <h3>Analisi delle esigenze</h3>
+        <p>Partiamo da utilizzo reale, numero mezzi, percorrenze, budget e obiettivi aziendali.</p>
+      </div>
+
+      <div class="card">
+        <span class="badge">Strategia</span>
+        <h3>Soluzioni su misura</h3>
+        <p>Confrontiamo categorie, canoni, servizi e condizioni per costruire una proposta coerente.</p>
+      </div>
+
+      <div class="card">
+        <span class="badge">Risultato</span>
+        <h3>Più controllo sui costi</h3>
+        <p>L’obiettivo è ridurre sprechi, imprevisti e scelte poco allineate alla tua operatività.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Processo</div>
+        <h2>Un percorso chiaro, dalla richiesta alla proposta.</h2>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Risultato</h3>
-      <p>Riduzione costi e semplicità.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-number">01</div>
+        <div>
+          <h3>Raccolta informazioni</h3>
+          <p>Numero veicoli, categorie, chilometraggi, durata, anticipo, servizi e preferenze operative.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-number">02</div>
+        <div>
+          <h3>Analisi e confronto</h3>
+          <p>Valutiamo alternative e scenari per individuare la soluzione più efficiente.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-number">03</div>
+        <div>
+          <h3>Proposta personalizzata</h3>
+          <p>Costruiamo una proposta chiara, leggibile e orientata alla gestione dei costi.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-number">04</div>
+        <div>
+          <h3>Supporto operativo</h3>
+          <p>Ti accompagniamo nella scelta e nella gestione delle informazioni essenziali.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Valori</div>
+        <h2>Trasparenza, concretezza e attenzione al cliente.</h2>
+      </div>
+      <p>
+        Il nostro lavoro è semplificare decisioni che spesso sembrano complesse:
+        canoni, servizi, percorrenze, condizioni e disponibilità.
+      </p>
     </div>
 
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Chiarezza</h3>
+        <p>Spieghiamo condizioni e differenze tra soluzioni in modo comprensibile.</p>
+      </div>
+
+      <div class="card">
+        <h3>Indipendenza</h3>
+        <p>Valutiamo più possibilità per proporre la scelta più adatta al contesto aziendale.</p>
+      </div>
+
+      <div class="card">
+        <h3>Orientamento al risultato</h3>
+        <p>Non vendiamo solo un veicolo: aiutiamo a costruire una mobilità più efficiente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container band">
+    <div>
+      <h2>Vuoi capire qual è la soluzione più adatta alla tua azienda?</h2>
+      <p>Partiamo da una prima analisi e costruiamo insieme una proposta su misura.</p>
+    </div>
+    <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20consulenza%20per%20la%20mia%20flotta%20aziendale" target="_blank" rel="noopener">Richiedi consulenza</a>
   </div>
 </section>
 
 </main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <h4>GV Fleet Consulting</h4>
+      <p>Soluzioni di noleggio lungo termine e consulenza flotte per aziende, professionisti e Partite IVA.</p>
+    </div>
+
+    <div>
+      <h4>Link utili</h4>
+      <a href="index.html">Home</a>
+      <a href="fleet.html">La mia flotta</a>
+      <a href="simulatore.html">Simulatore</a>
+      <a href="storychisiamo.html">Chi siamo</a>
+    </div>
+
+    <div>
+      <h4>Contatti</h4>
+      <a href="mailto:backoffice@gvsolutionssrls.it">backoffice@gvsolutionssrls.it</a>
+      <a href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20informazioni" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+
+    <div>
+      <h4>Legale</h4>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">© 2026 GV Solutions — Tutti i diritti riservati</div>
+</footer>
+
+<script src="navbar.js"></script>
 
 </body>
 </html>
