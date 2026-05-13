@@ -1,85 +1,56 @@
-document.getElementById("navbar").innerHTML = `
+// NAVBAR PREMIUM GV FLEET CONSULTING
 
-<nav class="nav">
+document.addEventListener("DOMContentLoaded", () => {
+  const mount = document.getElementById("navbar");
 
-  <div class="container nav-inner">
+  const activateNavbar = () => {
+    const nav = document.querySelector(".nav");
+    if (!nav) return;
 
-    <a class="logo" href="index.html">
-      <img src="logo.png" alt="GV Fleet Consulting">
-      <span>GV Fleet Consulting</span>
-    </a>
+    let lastScrollTop = 0;
 
-    <div class="nav-links">
+    window.addEventListener("scroll", () => {
+      const currentScroll =
+        window.pageYOffset || document.documentElement.scrollTop;
 
-      <a href="index.html">Home</a>
+      if (currentScroll > 80) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
 
-      <a href="fleet.html">La mia flotta</a>
+      if (currentScroll > lastScrollTop && currentScroll > 150) {
+        nav.style.transform = "translateY(-100%)";
+      } else {
+        nav.style.transform = "translateY(0)";
+      }
 
-      <a href="simulatore.html">Simulatore</a>
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
 
-      <a href="case-study.html">Case Study</a>
+    const currentPage =
+      window.location.pathname.split("/").pop() || "index.html";
 
-      <a href="storychisiamo.html">Chi siamo</a>
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      const linkPage = link.getAttribute("href");
 
-      <a href="contatti.html">Contatti</a>
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  };
 
-      <a
-        class="btn-whatsapp"
-        href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20informazioni"
-        target="_blank"
-      >
-        WhatsApp
-      </a>
-
-    </div>
-
-  </div>
-
-</nav>
-
-`;
-
-
-
-/* =========================
-   ACTIVE LINK
-========================= */
-
-const links = document.querySelectorAll(".nav-links a");
-
-const currentPage =
-window.location.pathname.split("/").pop();
-
-links.forEach(link => {
-
-  const linkPage = link.getAttribute("href");
-
-  if(linkPage === currentPage){
-
-    link.classList.add("active");
-
+  if (mount) {
+    fetch("navbar.html")
+      .then((response) => response.text())
+      .then((html) => {
+        mount.innerHTML = html;
+        activateNavbar();
+      })
+      .catch(() => {
+        activateNavbar();
+      });
+  } else {
+    activateNavbar();
   }
-
-});
-
-
-
-/* =========================
-   SCROLL EFFECT
-========================= */
-
-const nav = document.querySelector(".nav");
-
-window.addEventListener("scroll", () => {
-
-  if(window.scrollY > 40){
-
-    nav.classList.add("scrolled");
-
-  }else{
-
-    nav.classList.remove("scrolled");
-
-  }
-
 });
