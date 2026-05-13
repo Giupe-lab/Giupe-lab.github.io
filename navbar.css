@@ -1,21 +1,28 @@
 /* NAVBAR PREMIUM GV FLEET CONSULTING */
 
 .nav{
-  position:sticky;
+  position:fixed;
   top:0;
+  left:0;
+  width:100%;
   z-index:999;
+
   background:rgba(5,12,24,.82);
+
   backdrop-filter:blur(18px);
   -webkit-backdrop-filter:blur(18px);
+
   border-bottom:1px solid rgba(255,255,255,.10);
+
   transform:translateY(0);
+
   will-change:transform;
+
   transition:
     transform .35s ease,
     background .35s ease,
     box-shadow .35s ease,
     border-color .35s ease;
-   
 }
 
 .nav.scrolled{
