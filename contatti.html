@@ -355,7 +355,58 @@ gap:24px;
 }
 
 }
+.contact-form label{
+  display:block;
+  font-weight:900;
+  margin:14px 0 7px;
+}
 
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:14px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  font-family:inherit;
+}
+
+.contact-direct{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.contact-card{
+  padding:30px;
+  border-radius:30px;
+  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045));
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+
+.contact-card a{
+  color:#fff;
+  font-weight:900;
+}
+
+.privacy-note{
+  margin-top:16px;
+  font-size:.88rem;
+  color:var(--muted);
+}
+
+.privacy-note a{
+  color:#fff;
+  text-decoration:underline;
+}
+
+@media(max-width:900px){
+  .contact-direct{
+    grid-template-columns:1fr;
+  }
+}
 </style>
 </head>
 
@@ -366,221 +417,71 @@ gap:24px;
 <main>
 
 <section class="hero">
+  <div class="container hero-grid">
 
-<div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Contatti</div>
+      <h1>Raccontaci la tua esigenza.</h1>
+      <p class="lead">
+        Compila una richiesta veloce oppure contattaci direttamente.
+        Ti aiuteremo a trovare la soluzione più adatta per la tua flotta aziendale.
+      </p>
 
-<div>
+      <div class="actions">
+        <a class="btn whatsapp" href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20consulenza%20per%20la%20mia%20flotta" target="_blank">WhatsApp</a>
+        <a class="btn secondary" href="mailto:backoffice@gvsolutionssrls.it">Email</a>
+      </div>
+    </div>
 
-<div class="eyebrow">
-Contatti
-</div>
+    <div class="hero-card contact-form">
 
-<h1>
-Parliamo della tua mobilità aziendale.
-</h1>
+      <span class="badge">Richiesta veloce</span>
 
-<p class="lead">
-Contattaci per una consulenza dedicata su
-noleggio lungo termine, gestione flotte
-e soluzioni per aziende e professionisti.
-</p>
+      <label>Nome e cognome</label>
+      <input id="nome" placeholder="Mario Rossi">
 
-<div class="actions">
+      <label>Azienda</label>
+      <input id="azienda" placeholder="Nome azienda">
 
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20una%20consulenza%20per%20la%20mia%20flotta"
-target="_blank">
+      <label>Telefono</label>
+      <input id="telefono" placeholder="+39">
 
-WhatsApp
+      <label>Email</label>
+      <input id="email" placeholder="email@azienda.it">
 
-</a>
+      <label>Messaggio</label>
+      <textarea id="messaggio" rows="5" placeholder="Scrivi qui la tua richiesta..."></textarea>
 
-<a class="btn secondary"
-href="mailto:backoffice@gvsolutionssrls.it">
+      <a class="btn primary" style="width:100%;margin-top:18px" href="#" onclick="sendContactRequest()">
+        Invia richiesta
+      </a>
 
-Invia email
+      <p class="privacy-note">
+        Inviando la richiesta dichiari di aver preso visione della
+        <a href="privacy-policy.html">Privacy Policy</a>.
+      </p>
 
-</a>
+    </div>
 
-</div>
-
-</div>
-
-<div class="hero-card">
-
-<span class="badge">
-GV Fleet Consulting
-</span>
-
-<h3>
-Supporto rapido e consulenza dedicata.
-</h3>
-
-<p>
-Analizziamo la tua esigenza aziendale
-e costruiamo una proposta più chiara,
-sostenibile e coerente con il tuo utilizzo reale.
-</p>
-
-</div>
-
-</div>
-
+  </div>
 </section>
 
 <section class="section">
+  <div class="container contact-direct">
 
-<div class="container">
+    <div class="contact-card">
+      <h3>Email</h3>
+      <p>Per richieste commerciali e consulenze.</p>
+      <a href="mailto:backoffice@gvsolutionssrls.it">backoffice@gvsolutionssrls.it</a>
+    </div>
 
-<div class="section-head">
+    <div class="contact-card">
+      <h3>Telefono / WhatsApp</h3>
+      <p>Contatto diretto per una prima valutazione.</p>
+      <a href="tel:+39INSERISCI_NUMERO">+39 INSERISCI NUMERO</a>
+    </div>
 
-<div>
-
-<div class="eyebrow">
-Canali di contatto
-</div>
-
-<h2>
-Scegli il modo più comodo per contattarci.
-</h2>
-
-</div>
-
-<p>
-Siamo disponibili per richieste informative,
-consulenze e valutazioni preliminari.
-</p>
-
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-box">
-
-<div class="contact-icon">
-✉️
-</div>
-
-<h3>
-Email
-</h3>
-
-<p>
-Per richieste commerciali e informazioni dettagliate.
-</p>
-
-<a class="btn secondary"
-href="mailto:backoffice@gvsolutionssrls.it">
-
-backoffice@gvsolutionssrls.it
-
-</a>
-
-</div>
-
-<div class="contact-box">
-
-<div class="contact-icon">
-💬
-</div>
-
-<h3>
-WhatsApp
-</h3>
-
-<p>
-Contatto diretto per una prima consulenza rapida.
-</p>
-
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?text=Ciao%2C%20vorrei%20informazioni"
-target="_blank">
-
-Apri WhatsApp
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="container grid grid-3">
-
-<div class="card">
-
-<h3>
-Consulenza flotte
-</h3>
-
-<p>
-Supporto per aziende che vogliono ottimizzare
-gestione e costi dei veicoli aziendali.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-Noleggio lungo termine
-</h3>
-
-<p>
-Analisi e confronto di soluzioni NLT
-per PMI, professionisti e Partite IVA.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-Supporto personalizzato
-</h3>
-
-<p>
-Proposte costruite in base a durata,
-chilometraggio e utilizzo reale.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="container band">
-
-<div>
-
-<h2>
-Vuoi ricevere una proposta personalizzata?
-</h2>
-
-<p>
-Partiamo da una prima analisi
-delle tue esigenze aziendali.
-</p>
-
-</div>
-
-<a class="btn primary"
-href="simulatore.html">
-
-Apri simulatore
-
-</a>
-
-</div>
-
+  </div>
 </section>
 
 </main>
@@ -662,6 +563,27 @@ Privacy Policy
 </footer>
 
 <script src="navbar.js"></script>
+<script>
+function sendContactRequest(){
+  const nome = document.getElementById('nome').value;
+  const azienda = document.getElementById('azienda').value;
+  const telefono = document.getElementById('telefono').value;
+  const email = document.getElementById('email').value;
+  const messaggio = document.getElementById('messaggio').value;
 
+  const body =
+`Nome: ${nome}
+Azienda: ${azienda}
+Telefono: ${telefono}
+Email: ${email}
+
+Messaggio:
+${messaggio}`;
+
+  window.location.href =
+  'mailto:backoffice@gvsolutionssrls.it?subject=Richiesta contatto dal sito&body='
+  + encodeURIComponent(body);
+}
+</script>
 </body>
 </html>
