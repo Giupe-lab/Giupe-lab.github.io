@@ -8,10 +8,13 @@
   backdrop-filter:blur(18px);
   -webkit-backdrop-filter:blur(18px);
   border-bottom:1px solid rgba(255,255,255,.10);
+  transform:translateY(0);
+  will-change:transform;
   transition:
     transform .35s ease,
     background .35s ease,
     box-shadow .35s ease,
+    border-color .35s ease;
    
 }
 
