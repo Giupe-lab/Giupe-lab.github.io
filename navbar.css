@@ -9,10 +9,10 @@
   -webkit-backdrop-filter:blur(18px);
   border-bottom:1px solid rgba(255,255,255,.10);
   transition:
-    transform .34s ease,
-    background .34s ease,
-    box-shadow .34s ease,
-    border-color .34s ease;
+    transform .35s ease,
+    background .35s ease,
+    box-shadow .35s ease,
+   
 }
 
 .nav.scrolled{
