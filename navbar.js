@@ -7,26 +7,43 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector(".nav");
     if (!nav) return;
 
-    let lastScrollTop = 0;
+ let lastScrollTop = 0;
 
-    window.addEventListener("scroll", () => {
-      const currentScroll =
-        window.pageYOffset || document.documentElement.scrollTop;
+const navbar = document.querySelector('.nav');
 
-      if (currentScroll > 80) {
-        nav.classList.add("scrolled");
-      } else {
-        nav.classList.remove("scrolled");
-      }
+window.addEventListener('scroll', () => {
 
-      if (currentScroll > lastScrollTop && currentScroll > 150) {
-        nav.style.transform = "translateY(-100%)";
-      } else {
-        nav.style.transform = "translateY(0)";
-      }
+  const currentScroll =
+  window.pageYOffset ||
+  document.documentElement.scrollTop;
 
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    });
+  /* effetto background */
+
+  if(currentScroll > 40){
+
+    navbar.classList.add('scrolled');
+
+  }else{
+
+    navbar.classList.remove('scrolled');
+
+  }
+
+  /* scomparsa navbar */
+
+  if(currentScroll > lastScrollTop && currentScroll > 120){
+
+    navbar.style.transform = 'translateY(-100%)';
+
+  }else{
+
+    navbar.style.transform = 'translateY(0)';
+
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+
+});
 
     const currentPage =
       window.location.pathname.split("/").pop() || "index.html";
