@@ -3,59 +3,40 @@
 document.addEventListener("DOMContentLoaded", () => {
   const mount = document.getElementById("navbar");
 
-  const activateNavbar = () => {
+  function activateNavbar() {
     const nav = document.querySelector(".nav");
     if (!nav) return;
 
- let lastScrollTop = 0;
+    let lastScrollTop = 0;
 
-const navbar = document.querySelector('.nav');
+    window.addEventListener("scroll", () => {
+      const currentScroll =
+        window.pageYOffset || document.documentElement.scrollTop;
 
-window.addEventListener('scroll', () => {
+      if (currentScroll > 40) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
 
-  const currentScroll =
-  window.pageYOffset ||
-  document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop && currentScroll > 120) {
+        nav.style.transform = "translateY(-100%)";
+      } else {
+        nav.style.transform = "translateY(0)";
+      }
 
-  /* effetto background */
-
-  if(currentScroll > 40){
-
-    navbar.classList.add('scrolled');
-
-  }else{
-
-    navbar.classList.remove('scrolled');
-
-  }
-
-  /* scomparsa navbar */
-
-  if(currentScroll > lastScrollTop && currentScroll > 120){
-
-    navbar.style.transform = 'translateY(-100%)';
-
-  }else{
-
-    navbar.style.transform = 'translateY(0)';
-
-  }
-
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-
-});
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
 
     const currentPage =
       window.location.pathname.split("/").pop() || "index.html";
 
     document.querySelectorAll(".nav-links a").forEach((link) => {
-      const linkPage = link.getAttribute("href");
-
-      if (linkPage === currentPage) {
+      if (link.getAttribute("href") === currentPage) {
         link.classList.add("active");
       }
     });
-  };
+  }
 
   if (mount) {
     fetch("navbar.html")
@@ -64,9 +45,7 @@ window.addEventListener('scroll', () => {
         mount.innerHTML = html;
         activateNavbar();
       })
-      .catch(() => {
-        activateNavbar();
-      });
+      .catch(() => activateNavbar());
   } else {
     activateNavbar();
   }
